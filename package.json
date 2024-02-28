@@ -1,0 +1,35 @@
+{
+  "name": "food-app",
+  "version": "1.0.0",
+  "description": "A food delivery app for Hungry hulks",
+  "scripts": {
+    "start": "parcel index.html",
+    "build": "parcel build index.html",
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Deeksha1502/FoodApp.git"
+  },
+  "keywords": [
+    "react"
+  ],
+  "author": "Deeksha",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Deeksha1502/FoodApp/issues"
+  },
+  "homepage": "https://github.com/Deeksha1502/FoodApp#readme",
+  "devDependencies": {
+    "assert": "^2.1.0",
+    "console-browserify": "^1.2.0",
+    "parcel": "^2.11.0",
+    "process": "^0.11.10",
+    "util": "^0.12.5"
+  },
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-router-dom": "^6.22.1"
+  },
+  "main": "index.js"
+}
