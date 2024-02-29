@@ -1,56 +1,5 @@
 const resList = [
   {
-    id: "30955",
-    name: "KFC",
-    cloudinaryImageId: "f01666ac73626461d7455d9c24005cd4",
-    locality: "Mantri Square",
-    areaName: "Malleshwaram",
-    costForTwo: "₹400 for two",
-    cuisines: ["Burgers", "Biryani", "American", "Snacks", "Fast Food"],
-    avgRating: 4.2,
-    parentId: "547",
-    avgRatingString: "4.2",
-    totalRatingsString: "10K+",
-    sla: {
-      deliveryTime: 45,
-      lastMileTravel: 5,
-      serviceability: "SERVICEABLE",
-      slaString: "45-50 mins",
-      lastMileTravelString: "5.0 km",
-      iconType: "ICON_TYPE_EMPTY",
-    },
-    availability: {
-      nextCloseTime: "2024-02-23 23:00:00",
-      opened: true,
-    },
-    badges: {},
-    isOpen: true,
-    type: "F",
-    badgesV2: {
-      entityBadges: {
-        imageBased: {},
-        textBased: {},
-        textExtendedBadges: {},
-      },
-    },
-    aggregatedDiscountInfoV3: {
-      header: "40% OFF",
-      subHeader: "UPTO ₹80",
-    },
-    differentiatedUi: {
-      displayType: "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
-      differentiatedUiMediaDetails: {
-        mediaType: "ADS_MEDIA_ENUM_IMAGE",
-        lottie: {},
-        video: {},
-      },
-    },
-    reviewsSummary: {},
-    displayType: "RESTAURANT_DISPLAY_TYPE_DEFAULT",
-    restaurantOfferPresentationInfo: {},
-  },
-
-  {
     id: "30531",
     name: "Hotel Empire",
     cloudinaryImageId: "qltgnkyywuo5gmnpqzbm",
@@ -333,7 +282,7 @@ const resList = [
     displayType: "RESTAURANT_DISPLAY_TYPE_DEFAULT",
     restaurantOfferPresentationInfo: {},
   },
-  
+
   {
     id: "146304",
     name: "Hyderabad Biryaani House",
@@ -381,6 +330,57 @@ const resList = [
         video: {},
       },
     },
+  },
+
+  {
+    id: "30955",
+    name: "KFC",
+    cloudinaryImageId: "f01666ac73626461d7455d9c24005cd4",
+    locality: "Mantri Square",
+    areaName: "Malleshwaram",
+    costForTwo: "₹400 for two",
+    cuisines: ["Burgers", "Biryani", "American", "Snacks", "Fast Food"],
+    avgRating: 4.2,
+    parentId: "547",
+    avgRatingString: "4.2",
+    totalRatingsString: "10K+",
+    sla: {
+      deliveryTime: 45,
+      lastMileTravel: 5,
+      serviceability: "SERVICEABLE",
+      slaString: "45-50 mins",
+      lastMileTravelString: "5.0 km",
+      iconType: "ICON_TYPE_EMPTY",
+    },
+    availability: {
+      nextCloseTime: "2024-02-23 23:00:00",
+      opened: true,
+    },
+    badges: {},
+    isOpen: true,
+    type: "F",
+    badgesV2: {
+      entityBadges: {
+        imageBased: {},
+        textBased: {},
+        textExtendedBadges: {},
+      },
+    },
+    aggregatedDiscountInfoV3: {
+      header: "40% OFF",
+      subHeader: "UPTO ₹80",
+    },
+    differentiatedUi: {
+      displayType: "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
+      differentiatedUiMediaDetails: {
+        mediaType: "ADS_MEDIA_ENUM_IMAGE",
+        lottie: {},
+        video: {},
+      },
+    },
+    reviewsSummary: {},
+    displayType: "RESTAURANT_DISPLAY_TYPE_DEFAULT",
+    restaurantOfferPresentationInfo: {},
   },
 ];
 export default resList;

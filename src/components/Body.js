@@ -5,8 +5,6 @@ import resList from "../utils/mockdata";
 const Body = () => {
   const [listOfRestaurants, setListOfRestaurants] = useState([]);
   const [filteredRestaurant, setFilteredRestaurant] = useState([]);
-  console.log("This is filtered list ===>", filteredRestaurant);
-  console.log("This is rest list ===>", listOfRestaurants);
 
   const [searchText, setsearchText] = useState("");
   useEffect(() => {
@@ -46,7 +44,6 @@ const Body = () => {
                 res.name.toLowerCase().includes(searchText)
               );
               setFilteredRestaurant(filteredRestaurant);
-              // setFilteredRestaurant(filteredList);
             }}
           >
             Search
@@ -67,13 +64,6 @@ const Body = () => {
           Top Rated restaurants
         </button>
       </div>
-
-      {/* <div className="restaurant-container">  */}
-
-      {/* {listOfRestaurants?(listOfRestaurants.map((restaurant)=> */}
-      {/* <RestaurantCard key={restaurant.id} resData={restaurant}/>))} */}
-
-      {/* </div> */}
 
       <div className="restaurant-container">
         {listOfRestaurants.map((restaurant) => (
