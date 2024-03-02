@@ -1,11 +1,10 @@
 import React, { useState } from "react";
-import { ReactDOM } from "react";
-import { LOGO_URL } from "../utils/constants";
 import { Link } from "react-router-dom";
+import { LOGO_URL } from "../utils/constants";
 
-const Header = () => {
-  
+export const Header = () => {
   const [btnNameReact, setBtnNameReact] = useState("Login");
+
   return (
     <div className="header">
       <div className="logo-c ontainer">
@@ -14,14 +13,22 @@ const Header = () => {
 
       <div className="nav-items">
         <ul>
-          <li><Link to ="/">Home</Link></li>
-          <li><Link to ="/about">About Us</Link></li>
-          <li><Link to ="/contact">Contact Us</Link></li>
+          <li>
+            <Link to="/">Home</Link>
+          </li>
+          <li>
+            <Link to="/about">About Us</Link>
+          </li>
+          <li>
+            <Link to="/contact">Contact Us</Link>
+          </li>
           <li>Cart</li>
           <button
             className="login"
             onClick={() => {
-              btnNameReact == "Login" ? setBtnNameReact("Logout"):setBtnNameReact("Login")
+              btnNameReact == "Login"
+                ? setBtnNameReact("Logout")
+                : setBtnNameReact("Login");
             }}
           >
             {btnNameReact}
@@ -31,5 +38,3 @@ const Header = () => {
     </div>
   );
 };
-
-export default Header;
