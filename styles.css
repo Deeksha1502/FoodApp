@@ -25,6 +25,7 @@
   padding: 5px;
   margin: 25px;
   width: 266px;
+  background-color: #f0f0f0;
 }
 .restaurant-card:hover {
   cursor: pointer;

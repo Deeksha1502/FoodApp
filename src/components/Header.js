@@ -1,10 +1,10 @@
 import React, { useState } from "react";
-import { ReactDOM } from "react";
-import { LOGO_URL } from "../utils/constants";
 import { Link } from "react-router-dom";
+import { LOGO_URL } from "../utils/constants";
 
-const Header = () => {
+export const Header = () => {
   const [btnNameReact, setBtnNameReact] = useState("Login");
+
   return (
     <div className="header">
       <div className="logo-c ontainer">
@@ -38,5 +38,3 @@ const Header = () => {
     </div>
   );
 };
-
-export default Header;

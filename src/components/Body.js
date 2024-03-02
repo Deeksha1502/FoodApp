@@ -1,28 +1,25 @@
 import { useEffect, useState } from "react";
-import RestaurantCard from "./RestaurantCard";
-import resList from "../utils/mockdata";
+import { RESTAURANT_LIST_API } from "../utils/constants";
+import { RestaurantCard } from "./RestaurantCard";
 
-const Body = () => {
+export const Body = () => {
   const [listOfRestaurants, setListOfRestaurants] = useState([]);
   const [filteredRestaurant, setFilteredRestaurant] = useState([]);
-
   const [searchText, setsearchText] = useState("");
+
   useEffect(() => {
-    setListOfRestaurants(resList);
+    fetchData();
   }, []);
-  // whenever the state variable updates react triggers a reconciliation cycle(rerenders the component)
 
-  // const fetchData = async () => {
-  //   const data = await fetch(
-  //     "https://www.swiggy.com/dapi/restaurants/list/v5?lat=12.96340&lng=77.58550&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING"
-  //   );
-  //   const json = await data.json();
-  //   console.log(listOfRestaurants);
-
-  //   setListOfRestaurants(
-  //     json?.data?.cards[4]?.card?.card?.gridElements?.infoWithStyle?.restaurants
-  //   );
-  // };
+  const fetchData = async () => {
+    const URI_COMPONENT =
+      "https://corsproxy.org/?" + encodeURIComponent(RESTAURANT_LIST_API);
+    const data = await fetch(URI_COMPONENT);
+    const json = await data.json();
+    setListOfRestaurants(
+      json?.data?.cards[4]?.card?.card?.gridElements?.infoWithStyle?.restaurants
+    );
+  };
 
   return (
     <div className="body">
@@ -39,7 +36,6 @@ const Body = () => {
 
           <button
             onClick={() => {
-              console.log(searchText);
               const filteredRestaurant = listOfRestaurants.filter((res) =>
                 res.name.toLowerCase().includes(searchText)
               );
@@ -55,8 +51,6 @@ const Body = () => {
             const filteredList = listOfRestaurants.filter(
               (res) => res.avgRating > 4
             );
-            console.log(listOfRestaurants);
-
             setListOfRestaurants(filteredList);
             setFilteredRestaurant(filteredList);
           }}
@@ -66,11 +60,10 @@ const Body = () => {
       </div>
 
       <div className="restaurant-container">
-        {listOfRestaurants.map((restaurant) => (
+        {listOfRestaurants?.map((restaurant) => (
           <RestaurantCard key={restaurant.id} resData={restaurant} />
         ))}
       </div>
     </div>
   );
 };
-export default Body;
