@@ -1,6 +1,7 @@
 import { useEffect } from "react";
 import { RESTAURANT_LIST_API } from "../utils/constants";
 import { useState } from "react";
+import { CORS_PROXY_URL } from "../utils/config";
 
 export const RestaurantMenu = () => {
   const [resInfo, setResinfo] = useState(null);
@@ -10,8 +11,7 @@ export const RestaurantMenu = () => {
   }, []);
 
   const fetchMenu = async () => {
-    const url =
-      "https://corsproxy.org/?" + encodeURIComponent(RESTAURANT_LIST_API);
+    const url = CORS_PROXY_URL + encodeURIComponent(RESTAURANT_LIST_API);
     const response = await fetch(url);
     const data = await response.json();
     setResinfo(data);
