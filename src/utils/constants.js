@@ -7,3 +7,6 @@ export const RESTAURANT_LIST_API =
 
 export const RESTAURANT_MENU_API =
   "https://www.swiggy.com/dapi/menu/pl?page-type=REGULAR_MENU&complete-menu=true&lat=12.96340&lng=77.58550&restaurantId=10820&catalog_qa=undefined&submitAction=ENTER";
+
+export const OFFLINE_MESSAGE =
+  "Looks like you are offline, Please check your internt connection";
