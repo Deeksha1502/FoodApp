@@ -1,5 +1,5 @@
 import { useEffect } from "react";
-import { RESTAURANT_LIST_API } from "../utils/constants";
+import { RESTAURANT_MENU_API } from "../utils/constants";
 import { useState } from "react";
 import { CORS_PROXY_URL } from "../utils/config";
 
@@ -11,23 +11,36 @@ export const RestaurantMenu = () => {
   }, []);
 
   const fetchMenu = async () => {
-    const url = CORS_PROXY_URL + encodeURIComponent(RESTAURANT_LIST_API);
-    const response = await fetch(url);
-    const data = await response.json();
-    setResinfo(data);
+    try {
+      const url = CORS_PROXY_URL + encodeURIComponent(RESTAURANT_MENU_API);
+      const response = await fetch(url);
+      const data = await response.json();
+      setResinfo(data);
+    } catch (err) {
+      console.error(err);
+    }
   };
-
-  const restaurantData =
-    resInfo?.data?.cards[4]?.card?.card?.gridElements?.infoWithStyle
-      ?.restaurants[4]?.info;
+  const restaurantData = resInfo?.data?.cards[0]?.card?.card?.info;
+  const menuItems =
+    resInfo?.data?.cards[2]?.groupedCard?.cardGroupMap?.REGULAR?.cards[1]?.card
+      ?.card;
 
   return (
-    <div className="menu">
-      <h1>{restaurantData?.name}</h1>
-      <h2>{restaurantData?.cuisines.join(", ")}</h2>
+    <div className="p-6 m-4 border-solid border-black border-2 rounded-md font-normal md:font-bold">
+      <div className="text-2xl py-4">{restaurantData?.name}</div>
+      <h2>Cusines: {restaurantData?.cuisines.join(", ")}</h2>
       <ul>
-        <li>{restaurantData?.costForTwo}</li>
-        <li>{restaurantData?.sla.slaString}</li>
+        <li>Cost for Two: {restaurantData?.costForTwoMessage}</li>
+        <h3>Menu items</h3>
+        {menuItems?.itemCards.map((item) => (
+          <div>
+            <li>
+              {item.card?.info?.name}- Rs.
+              {menuItems?.itemCards[0]?.card?.info?.price / 100}
+            </li>
+            <li>Average rating: {restaurantData?.avgRating}</li>
+          </div>
+        ))}
       </ul>
     </div>
   );
