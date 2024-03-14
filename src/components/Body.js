@@ -16,6 +16,9 @@ export const Body = () => {
   const fetchData = async () => {
     const URI_COMPONENT =
       CORS_PROXY_URL + encodeURIComponent(RESTAURANT_LIST_API);
+
+    // const URI_COMPONENT =
+    // CORS_PROXY_URL + encodeURIComponent(RESTAURANT_LIST_API);
     const data = await fetch(URI_COMPONENT);
 
     const json = await data?.json();
@@ -23,7 +26,7 @@ export const Body = () => {
       json?.data?.cards[4]?.card?.card?.gridElements?.infoWithStyle?.restaurants
     );
   };
-
+  console.log(listOfRestaurants);
   const onlineStatus = useOnlineStatus();
   if (!onlineStatus) return <h1>{OFFLINE_MESSAGE}</h1>;
 
