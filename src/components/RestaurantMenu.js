@@ -31,6 +31,7 @@ export const RestaurantMenu = () => {
       <h2>Cusines: {restaurantData?.cuisines.join(", ")}</h2>
       <ul>
         <li>Cost for Two: {restaurantData?.costForTwoMessage}</li>
+        <li>Location: {restaurantData?.city} </li>
         <h3>Menu items</h3>
         {menuItems?.itemCards.map((item) => (
           <div>
@@ -38,6 +39,7 @@ export const RestaurantMenu = () => {
               {item.card?.info?.name}- Rs.
               {menuItems?.itemCards[0]?.card?.info?.price / 100}
             </li>
+
             <li>Average rating: {restaurantData?.avgRating}</li>
           </div>
         ))}
