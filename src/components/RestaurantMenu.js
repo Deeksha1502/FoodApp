@@ -2,9 +2,12 @@ import { useEffect } from "react";
 import { RESTAURANT_MENU_API } from "../utils/constants";
 import { useState } from "react";
 import { CORS_PROXY_URL } from "../utils/config";
+import { useParams } from "react-router-dom";
 
 export const RestaurantMenu = () => {
   const [resInfo, setResinfo] = useState(null);
+
+  const params = useParams();
 
   useEffect(() => {
     fetchMenu();
@@ -12,7 +15,8 @@ export const RestaurantMenu = () => {
 
   const fetchMenu = async () => {
     try {
-      const url = CORS_PROXY_URL + encodeURIComponent(RESTAURANT_MENU_API);
+      const url =
+        CORS_PROXY_URL + encodeURIComponent(RESTAURANT_MENU_API(params.resId));
       const response = await fetch(url);
       const data = await response.json();
       setResinfo(data);
@@ -32,15 +36,14 @@ export const RestaurantMenu = () => {
       <ul>
         <li>Cost for Two: {restaurantData?.costForTwoMessage}</li>
         <li>Location: {restaurantData?.city} </li>
+        <li>Average rating: {restaurantData?.avgRating}</li>
         <h3>Menu items</h3>
-        {menuItems?.itemCards.map((item) => (
+        {menuItems?.itemCards?.map((item) => (
           <div>
             <li>
               {item.card?.info?.name}- Rs.
               {menuItems?.itemCards[0]?.card?.info?.price / 100}
             </li>
-
-            <li>Average rating: {restaurantData?.avgRating}</li>
           </div>
         ))}
       </ul>

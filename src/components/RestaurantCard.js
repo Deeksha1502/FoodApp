@@ -1,11 +1,21 @@
 import { CDN_URL } from "../utils/constants";
+import { useNavigate } from "react-router-dom";
 
 export const RestaurantCard = (props) => {
   const { resData } = props;
   const cuisines = resData.info.cuisines.join(", ");
 
+  const navigate = useNavigate();
+
+  const navigateToDetails = (resId) => {
+    navigate(`/restaurant/${resId}`);
+  };
+
   return (
-    <div className="m-4 p-4 w-[250px] bg-white rounded-lg hover:bg-blue-50">
+    <div
+      className="m-4 p-4 w-[250px] bg-white rounded-lg hover:bg-blue-50"
+      onClick={() => navigateToDetails(resData.info.id)}
+    >
       <img
         className="rounded-md"
         src={CDN_URL + resData.info.cloudinaryImageId}
