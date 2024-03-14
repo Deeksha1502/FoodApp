@@ -26,7 +26,7 @@ export const RestaurantMenu = () => {
   };
   const restaurantData = resInfo?.data?.cards[0]?.card?.card?.info;
   const menuItems =
-    resInfo?.data?.cards[2]?.groupedCard?.cardGroupMap?.REGULAR?.cards[1]?.card
+    resInfo?.data?.cards[2]?.groupedCard?.cardGroupMap?.REGULAR?.cards[3]?.card
       ?.card;
 
   return (
@@ -41,8 +41,8 @@ export const RestaurantMenu = () => {
         {menuItems?.itemCards?.map((item) => (
           <div>
             <li>
-              {item.card?.info?.name}- Rs.
-              {menuItems?.itemCards[0]?.card?.info?.price / 100}
+              {item.card?.info?.name}
+              {/* {menuItems?.itemCards[0]?.card?.info?.price} */}
             </li>
           </div>
         ))}
