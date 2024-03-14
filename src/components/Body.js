@@ -7,7 +7,7 @@ import { OFFLINE_MESSAGE } from "../utils/constants";
 export const Body = () => {
   const [listOfRestaurants, setListOfRestaurants] = useState([]);
   const [filteredRestaurant, setFilteredRestaurant] = useState([]);
-  const [searchText, setsearchText] = useState(null);
+  const [searchText, setSearchText] = useState();
 
   useEffect(() => {
     fetchData();
@@ -17,8 +17,6 @@ export const Body = () => {
     const URI_COMPONENT =
       CORS_PROXY_URL + encodeURIComponent(RESTAURANT_LIST_API);
 
-    // const URI_COMPONENT =
-    // CORS_PROXY_URL + encodeURIComponent(RESTAURANT_LIST_API);
     const data = await fetch(URI_COMPONENT);
 
     const json = await data?.json();
@@ -26,9 +24,6 @@ export const Body = () => {
       json?.data?.cards[4]?.card?.card?.gridElements?.infoWithStyle?.restaurants
     );
   };
-  console.log(listOfRestaurants);
-  const onlineStatus = useOnlineStatus();
-  if (!onlineStatus) return <h1>{OFFLINE_MESSAGE}</h1>;
 
   const filterList = () => {
     const filteredList = listOfRestaurants.filter((res) =>
@@ -36,6 +31,9 @@ export const Body = () => {
     );
     setFilteredRestaurant(filteredList);
   };
+
+  const onlineStatus = useOnlineStatus();
+  if (!onlineStatus) return <h1>{OFFLINE_MESSAGE}</h1>;
 
   const filterMenuRatings = () => {
     const filteredList = listOfRestaurants.filter(
@@ -48,12 +46,12 @@ export const Body = () => {
   return (
     <div>
       <div className="flex">
-        <div className="search my-4 ml-6 px-16">
+        <div className="my-4 ml-6 px-16">
           <input
             type="text"
-            className="ring-blue-500  border-solid border-black border-2 rounded-md"
+            className="ring-blue-500 border-black border-2 rounded-md"
             value={searchText}
-            onChange={(e) => setsearchText(e.target.value)}
+            onChange={(e) => setSearchText(e.target.value)}
           ></input>
 
           <button
@@ -63,12 +61,17 @@ export const Body = () => {
             Search
           </button>
         </div>
-        <div className="search  flex items-center">
+        <div className="flex items-center">
           <button
             className="px-4 py-1 bg-blue-700 text-white rounded-lg"
             onClick={filterMenuRatings}
           >
             Top Rated restaurants
+          </button>
+        </div>
+        <div className="px-4 m-4">
+          <button className="px-4 py-1 bg-green-700 text-white rounded-lg">
+            Pure Veg
           </button>
         </div>
       </div>
