@@ -1,12 +1,12 @@
 import { useEffect, useState } from "react";
-import { RESTAURANT_LIST_API } from "../utils/constants";
+import { resList } from "../utils/mockData";
 import { RestaurantCard } from "./RestaurantCard";
 import { CORS_PROXY_URL } from "../utils/config";
 import { useOnlineStatus } from "../utils/useOnlineStatus";
 import { OFFLINE_MESSAGE } from "../utils/constants";
 export const Body = () => {
-  const [listOfRestaurants, setListOfRestaurants] = useState([]);
-  const [filteredRestaurant, setFilteredRestaurant] = useState([]);
+  const [listOfRestaurants, setListOfRestaurants] = useState(resList);
+  const [filteredRestaurant, setFilteredRestaurant] = useState(resList);
   const [searchText, setSearchText] = useState();
 
   useEffect(() => {
@@ -14,20 +14,17 @@ export const Body = () => {
   }, []);
 
   const fetchData = async () => {
-    const URI_COMPONENT =
-      CORS_PROXY_URL + encodeURIComponent(RESTAURANT_LIST_API);
+    const URI_COMPONENT = encodeURIComponent(resList);
 
     const data = await fetch(URI_COMPONENT);
 
     const json = await data?.json();
-    setListOfRestaurants(
-      json?.data?.cards[4]?.card?.card?.gridElements?.infoWithStyle?.restaurants
-    );
+    setListOfRestaurants(json?.id);
   };
 
   const filterList = () => {
-    const filteredList = listOfRestaurants.filter((res) =>
-      res.info.name.toLowerCase().includes(searchText.toLowerCase())
+    const filteredList = listOfRestaurants.filter((resList) =>
+    resList.name.toLowerCase().includes(searchText.toLowerCase())
     );
     setFilteredRestaurant(filteredList);
   };
@@ -37,7 +34,7 @@ export const Body = () => {
 
   const filterMenuRatings = () => {
     const filteredList = listOfRestaurants.filter(
-      (res) => res.info.avgRating > 4.5
+      (resList) => resList.avgRating > 4.5
     );
 
     setFilteredRestaurant(filteredList);
@@ -81,7 +78,7 @@ export const Body = () => {
           ? filteredRestaurant
           : listOfRestaurants
         )?.map((restaurant) => (
-          <RestaurantCard key={restaurant.id} resData={restaurant} />
+          <RestaurantCard key={restaurant.id} resList={restaurant} />
         ))}
       </div>
     </div>

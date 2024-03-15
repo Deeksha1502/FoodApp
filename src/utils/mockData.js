@@ -1,8 +1,23 @@
-const resList = [
+import KFC from "../assets/kfc.png";
+import california from "../assets/california.png";
+import hariSuper from "../assets/hariSuper.png";
+import empire from "../assets/empire.png";
+import burgerking from "../assets/burgerking.png";
+import theobroma from "../assets/theobroma.png";
+import leon from "../assets/leon.png";
+import mcdonalds from "../assets/mcdonalds.png";
+import nic from "../assets/nic.png";
+import ab from "../assets/ab.png";
+import pizza from "../assets/pizza.png";
+import subway from "../assets/subway.png";
+import truffles from "../assets/truffles.png";
+import wowmomos from "../assets/wowmomos.png";
+import upahara from "../assets/upahara.png";
+export const resList = [
   {
     id: "69876",
     name: "Subway",
-    cloudinaryImageId: "63178e3e64d503a479f2a2048a474552",
+    cloudinaryImageId: subway,
     locality: "UB City",
     areaName: "Central Bangalore",
     costForTwo: "₹350 for two",
@@ -28,7 +43,7 @@ const resList = [
   {
     id: "43836",
     name: "McDonald's",
-    cloudinaryImageId: "f62564e14944753903849c4ef673af4d",
+    cloudinaryImageId: mcdonalds,
     locality: "MG Road",
     areaName: "Ashok Nagar",
     costForTwo: "₹400 for two",
@@ -54,7 +69,7 @@ const resList = [
   {
     id: "16073",
     name: "California Burrito",
-    cloudinaryImageId: "27238ee4292d42c7b705f2ce8671ff80",
+    cloudinaryImageId: california,
     locality: "Malleshwaram",
     areaName: "Malleshwaram",
     costForTwo: "₹250 for two",
@@ -92,16 +107,64 @@ const resList = [
       ],
     },
   },
+  {
+    id: "146304",
+    name: "A2B - Adyar Ananda Bhavan",
+    cloudinaryImageId: ab,
+    locality: "Victoria Road",
+    areaName: "Ashok Nagar",
+    costForTwo: "₹499 for two",
+    cuisines: ["Indian"],
+    avgRating: 4.3,
+    parentId: "2403",
+    avgRatingString: "4.3",
+    totalRatingsString: "5K+",
+    sla: {
+      deliveryTime: 27,
+      lastMileTravel: 3.5,
+      serviceability: "SERVICEABLE",
+      slaString: "25-30 mins",
+      lastMileTravelString: "3.5 km",
+      iconType: "ICON_TYPE_EMPTY",
+    },
+    availability: {
+      nextCloseTime: "2024-02-28 15:45:00",
+      opened: true,
+    },
+    badges: {},
+    isOpen: true,
+    type: "F",
+    badgesV2: {
+      entityBadges: {
+        imageBased: {},
+        textBased: {},
+        textExtendedBadges: {},
+      },
+    },
+    aggregatedDiscountInfoV3: {
+      header: "10% OFF",
+      subHeader: "ABOVE ₹800",
+      discountTag: "FLAT DEAL",
+    },
+    differentiatedUi: {
+      displayType: "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
+      differentiatedUiMediaDetails: {
+        mediaType: "ADS_MEDIA_ENUM_IMAGE",
+        lottie: {},
+        video: {},
+      },
+    },
+  },
 
   {
     id: "8766",
-    name: "Beijing Bites",
-    cloudinaryImageId: "ca0eb08d0635fd6da2e5a480fec897d0",
+    name: "Theobroma",
+    cloudinaryImageId: theobroma,
     locality: "Richmond Town",
     areaName: "Richmond Town",
-    costForTwo: "₹450 for two",
-    cuisines: ["Chinese"],
-    avgRating: 4.3,
+    costForTwo: "₹400 for two",
+    cuisines: ["Bakery,Desserts"],
+    avgRating: 4.5,
     parentId: "103",
     avgRatingString: "4.3",
     totalRatingsString: "10K+",
@@ -122,7 +185,7 @@ const resList = [
   {
     id: "30531",
     name: "Hotel Empire",
-    cloudinaryImageId: "qltgnkyywuo5gmnpqzbm",
+    cloudinaryImageId: empire,
     locality: "Brigade Road",
     areaName: "Church Street",
     costForTwo: "₹450 for two",
@@ -173,7 +236,7 @@ const resList = [
   {
     id: "77949",
     name: "Burger King",
-    cloudinaryImageId: "e33e1d3ba7d6b2bb0d45e1001b731fcf",
+    cloudinaryImageId: burgerking,
     locality: "Gandhi Bazar",
     areaName: "Basavanagudi",
     costForTwo: "₹350 for two",
@@ -221,7 +284,7 @@ const resList = [
   {
     id: "3369",
     name: "Truffles",
-    cloudinaryImageId: "cd832b6167eb9f88aeb1ccdebf38d942",
+    cloudinaryImageId: truffles,
     locality: "St. Marks Road",
     areaName: "St. Marks Road",
     costForTwo: "₹450 for two",
@@ -256,13 +319,13 @@ const resList = [
 
   {
     id: "4046",
-    name: "Sri Udupi Park",
+    name: "Hari Super Sandwich",
 
-    cloudinaryImageId: "tfbnpd65irvhp9iwhbtk",
+    cloudinaryImageId: hariSuper,
     locality: "Residency Road",
     areaName: "Residency Road",
-    costForTwo: "₹200 for two",
-    cuisines: ["North Indian", "South Indian", "Chinese", "Chaat", "Beverages"],
+    costForTwo: "₹100 for two",
+    cuisines: ["Chaat", "Snacks"],
     avgRating: 3.5,
     parentId: "4284",
     avgRatingString: "4.5",
@@ -271,7 +334,7 @@ const resList = [
       deliveryTime: 37,
       lastMileTravel: 4.2,
       serviceability: "SERVICEABLE",
-      slaString: "35-40 mins",
+      slaString: "30-35 mins",
       lastMileTravelString: "4.2 km",
       iconType: "ICON_TYPE_EMPTY",
     },
@@ -306,7 +369,7 @@ const resList = [
   {
     id: "29673",
     name: "Natural Ice Cream",
-    cloudinaryImageId: "on12tk5aqza0stxxsqhc",
+    cloudinaryImageId: nic,
     locality: "St. Marks Road",
     areaName: "St Marks Road",
     costForTwo: "₹150 for two",
@@ -354,7 +417,7 @@ const resList = [
   {
     id: "65797",
     name: "Leon's - Burgers & Wings (Leon Grill)",
-    cloudinaryImageId: "b2edbc28b7b8219d6e0a9c049ce06658",
+    cloudinaryImageId: leon,
     locality: "Koramangala",
     areaName: "Koramangala",
     costForTwo: "₹300 for two",
@@ -404,58 +467,9 @@ const resList = [
   },
 
   {
-    id: "146304",
-    name: "Hyderabad Biryaani House",
-    cloudinaryImageId: "taavokxehqfaugbzzhzk",
-    locality: "Victoria Road",
-    areaName: "Ashok Nagar",
-    costForTwo: "₹499 for two",
-    cuisines: ["Indian"],
-    avgRating: 4.3,
-    parentId: "2403",
-    avgRatingString: "4.3",
-    totalRatingsString: "5K+",
-    sla: {
-      deliveryTime: 27,
-      lastMileTravel: 3.5,
-      serviceability: "SERVICEABLE",
-      slaString: "25-30 mins",
-      lastMileTravelString: "3.5 km",
-      iconType: "ICON_TYPE_EMPTY",
-    },
-    availability: {
-      nextCloseTime: "2024-02-28 15:45:00",
-      opened: true,
-    },
-    badges: {},
-    isOpen: true,
-    type: "F",
-    badgesV2: {
-      entityBadges: {
-        imageBased: {},
-        textBased: {},
-        textExtendedBadges: {},
-      },
-    },
-    aggregatedDiscountInfoV3: {
-      header: "10% OFF",
-      subHeader: "ABOVE ₹800",
-      discountTag: "FLAT DEAL",
-    },
-    differentiatedUi: {
-      displayType: "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
-      differentiatedUiMediaDetails: {
-        mediaType: "ADS_MEDIA_ENUM_IMAGE",
-        lottie: {},
-        video: {},
-      },
-    },
-  },
-
-  {
     id: "30955",
     name: "KFC",
-    cloudinaryImageId: "f01666ac73626461d7455d9c24005cd4",
+    cloudinaryImageId: KFC,
     locality: "Mantri Square",
     areaName: "Malleshwaram",
     costForTwo: "₹400 for two",
@@ -502,5 +516,181 @@ const resList = [
     displayType: "RESTAURANT_DISPLAY_TYPE_DEFAULT",
     restaurantOfferPresentationInfo: {},
   },
+
+  {
+    id: "10575",
+    name: "Pizza Hut",
+    cloudinaryImageId: pizza,
+    locality: "Shanti Nagar",
+    areaName: "Shanti Nagar",
+    costForTwo: "₹600 for two",
+    cuisines: ["Pizzas"],
+    avgRating: 4.1,
+    parentId: "721",
+    avgRatingString: "4.1",
+    totalRatingsString: "5K+",
+    sla: {
+      deliveryTime: 26,
+      lastMileTravel: 1.6,
+      serviceability: "SERVICEABLE",
+      slaString: "25-30 mins",
+      lastMileTravelString: "1.6 km",
+      iconType: "ICON_TYPE_EMPTY",
+    },
+    availability: {
+      nextCloseTime: "2024-03-16 01:00:00",
+      opened: true,
+    },
+    badges: {},
+    isOpen: true,
+    type: "F",
+    badgesV2: {
+      entityBadges: {
+        imageBased: {},
+        textBased: {},
+        textExtendedBadges: {},
+      },
+    },
+    aggregatedDiscountInfoV3: {
+      header: "50% OFF",
+      subHeader: "UPTO ₹100",
+    },
+    differentiatedUi: {
+      displayType: "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
+      differentiatedUiMediaDetails: {
+        mediaType: "ADS_MEDIA_ENUM_IMAGE",
+        lottie: {},
+        video: {},
+      },
+    },
+    reviewsSummary: {},
+    displayType: "RESTAURANT_DISPLAY_TYPE_DEFAULT",
+    restaurantOfferPresentationInfo: {},
+  },
+  {
+    id: "22037",
+    name: "Wow! Momo",
+    cloudinaryImageId: wowmomos,
+    locality: "Brigade Road",
+    areaName: "Brigade Road",
+    costForTwo: "₹250 for two",
+    cuisines: [
+      "Tibetan",
+      "Healthy Food",
+      "Asian",
+      "Chinese",
+      "Snacks",
+      "Continental",
+      "Desserts",
+      "Beverages",
+    ],
+    avgRating: 4.4,
+    parentId: "1776",
+    avgRatingString: "4.4",
+    totalRatingsString: "5K+",
+    sla: {
+      deliveryTime: 36,
+      lastMileTravel: 3.6,
+      serviceability: "SERVICEABLE",
+      slaString: "35-40 mins",
+      lastMileTravelString: "3.6 km",
+      iconType: "ICON_TYPE_EMPTY",
+    },
+    availability: {
+      nextCloseTime: "2024-03-15 23:00:00",
+      opened: true,
+    },
+    badges: {},
+    isOpen: true,
+    type: "F",
+    badgesV2: {
+      entityBadges: {
+        imageBased: {},
+        textBased: {},
+        textExtendedBadges: {},
+      },
+    },
+    aggregatedDiscountInfoV3: {
+      header: "60% OFF",
+      subHeader: "UPTO ₹120",
+    },
+    differentiatedUi: {
+      displayType: "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
+      differentiatedUiMediaDetails: {
+        mediaType: "ADS_MEDIA_ENUM_IMAGE",
+        lottie: {},
+        video: {},
+      },
+    },
+    reviewsSummary: {},
+    displayType: "RESTAURANT_DISPLAY_TYPE_DEFAULT",
+    restaurantOfferPresentationInfo: {},
+  },
+
+  {
+    id: "102324",
+    name: "Upahara Darshini",
+    cloudinaryImageId: upahara,
+    locality: "Basavangudi",
+    areaName: "Basavangudi",
+    costForTwo: "₹400 for two",
+    cuisines: ["Chinese", "South Indian"],
+    avgRating: 4.5,
+    parentId: "114900",
+    avgRatingString: "4.3",
+    totalRatingsString: "5K+",
+    sla: {
+      deliveryTime: 35,
+      lastMileTravel: 3.9,
+      serviceability: "SERVICEABLE",
+      slaString: "30-35 mins",
+      lastMileTravelString: "3.9 km",
+      iconType: "ICON_TYPE_EMPTY",
+    },
+    availability: {
+      nextCloseTime: "2024-03-15 23:00:00",
+      opened: true,
+    },
+    badges: {
+      textExtendedBadges: [
+        {
+          iconId: "guiltfree/GF_Logo_android_3x",
+          shortDescription: "options available",
+          fontColor: "#7E808C",
+        },
+      ],
+    },
+    isOpen: true,
+    aggregatedDiscountInfoV2: {},
+    type: "F",
+    badgesV2: {
+      entityBadges: {
+        imageBased: {},
+        textBased: {},
+        textExtendedBadges: {
+          badgeObject: [
+            {
+              attributes: {
+                description: "",
+                fontColor: "#7E808C",
+                iconId: "guiltfree/GF_Logo_android_3x",
+                shortDescription: "options available",
+              },
+            },
+          ],
+        },
+      },
+    },
+    differentiatedUi: {
+      displayType: "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
+      differentiatedUiMediaDetails: {
+        mediaType: "ADS_MEDIA_ENUM_IMAGE",
+        lottie: {},
+        video: {},
+      },
+    },
+    reviewsSummary: {},
+    displayType: "RESTAURANT_DISPLAY_TYPE_DEFAULT",
+    restaurantOfferPresentationInfo: {},
+  },
 ];
-export default resList;

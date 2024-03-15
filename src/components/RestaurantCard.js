@@ -1,33 +1,36 @@
-import { CDN_URL } from "../utils/constants";
-import { useNavigate } from "react-router-dom";
+// import { CDN_URL } from "../utils/constants";
+// import { useNavigate } from "react-router-dom";
+import { resList } from "../utils/mockData";
+import logo from "../assets/kfc.png";
 
 export const RestaurantCard = (props) => {
-  const { resData } = props;
-  const cuisines = resData.info.cuisines.join(", ");
+  const { resList } = props;
+  console.log("This is reslist", resList);
 
-  const navigate = useNavigate();
+  // const navigate = useNavigate();
 
-  const navigateToDetails = (resId) => {
-    navigate(`/restaurant/${resId}`);
-  };
+  // const navigateToDetails = (resId) => {
+  //   navigate(`/restaurant/${resId}`);
+  // };
+  console.log("this is image", resList.cloudinaryImageId);
 
+  console.log("this is logo", logo);
   return (
     <div
       className="m-4 p-4 w-[250px] bg-white rounded-lg hover:bg-blue-50"
-      onClick={() => navigateToDetails(resData.info.id)}
+      // onClick={() => navigateToDetails(resData.info.id)}
     >
-      <img
-        className="rounded-md"
-        src={CDN_URL + resData.info.cloudinaryImageId}
-      ></img>
-      <div>
+      <img className="rounded-md" src={resList.cloudinaryImageId}></img>
+      <div className="font-semibold">
         <h3 className="border-l-red-400 font-bold py-4 text-lg">
-          {resData.info.name}
+          {resList.name}
         </h3>
-        <h4>{cuisines}</h4>
-        <h4>Avg Rating: {resData.info.avgRating}</h4>
-        <h4>Cost For Two: {resData.info.costForTwo}</h4>
-        <h4>Delivery Time: {resData.info.sla.slaString}</h4>
+
+        <h4>Cusines: {resList.cuisines.join(", ")}</h4>
+
+        <h4>Avg Rating: {resList.avgRating}</h4>
+        <h4>Cost For Two: {resList.costForTwo}</h4>
+        <h4>Delivery Time: {resList.sla.slaString}</h4>
       </div>
     </div>
   );
