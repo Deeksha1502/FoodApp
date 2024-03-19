@@ -13,25 +13,21 @@ export const Header = () => {
       </div>
       <div className="flex items-center ">
         <ul className="sticky text-white flex p-4 m-4 font-sans">
-          <li className="px-4">Online Status: {onlineStatus ? "🟢" : "🔴"}</li>
-          <li className="px-4">
-            <Link to="/" style={{ textDecoration: "none" }}>
-              Home
-            </Link>
+          <li className="px-4 font-semibold">
+            Online Status: {onlineStatus ? "🟢" : "🔴"}
           </li>
-          <li className="px-4">
-            <Link to="/about" style={{ textDecoration: "none" }}>
-              About Us
-            </Link>
+          <li className="px-4 font-semibold">
+            <Link to="/">Home</Link>
           </li>
-          <li className="px-4">
-            <Link to="/contact" style={{ textDecoration: "none" }}>
-              Contact Us
-            </Link>
+          <li className="px-4 font-semibold">
+            <Link to="/about">About Us</Link>
           </li>
-          <li className="px-4">Cart</li>
+          <li className="px-4 font-semibold">
+            <Link to="/contact">Contact Us</Link>
+          </li>
+          <li className="px-4 font-semibold">Cart</li>
           <button
-            className="login px-4"
+            className="login px-4 font-semibold"
             onClick={() => {
               btnNameReact == "Login"
                 ? setBtnNameReact("Logout")
