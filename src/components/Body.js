@@ -24,7 +24,7 @@ export const Body = () => {
 
   const filterList = () => {
     const filteredList = listOfRestaurants.filter((resList) =>
-    resList.name.toLowerCase().includes(searchText.toLowerCase())
+      resList.name.toLowerCase().includes(searchText.toLowerCase())
     );
     setFilteredRestaurant(filteredList);
   };
@@ -37,6 +37,13 @@ export const Body = () => {
       (resList) => resList.avgRating > 4.5
     );
 
+    setFilteredRestaurant(filteredList);
+  };
+
+  const filterPureVeg = () => {
+    const filteredList = listOfRestaurants.filter(
+      (resList) => resList.pureVeg === 1
+    );
     setFilteredRestaurant(filteredList);
   };
 
@@ -67,7 +74,10 @@ export const Body = () => {
           </button>
         </div>
         <div className="px-4 m-4">
-          <button className="px-4 py-1 bg-green-700 text-white rounded-lg">
+          <button
+            className="px-4 py-1 bg-green-700 text-white rounded-lg"
+            onClick={filterPureVeg}
+          >
             Pure Veg
           </button>
         </div>
