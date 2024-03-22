@@ -7,9 +7,11 @@ export const Header = () => {
   const onlineStatus = useOnlineStatus();
 
   return (
-    <div className="flex justify-between bg-blue-700 shadow-md h-20">
+    <div className="flex  justify-between bg-blue-700 shadow-md h-20">
       <div className="logo-c ontainer">
-        <img className=" w-20 h-50" src={LOGO_URL}></img>
+        <Link to="/">
+          <img className="w-20 h-50" src={LOGO_URL} />
+        </Link>
       </div>
       <div className="flex items-center ">
         <ul className="sticky text-white flex p-4 m-4 font-sans">

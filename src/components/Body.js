@@ -1,7 +1,6 @@
 import { useEffect, useState } from "react";
 import { resList } from "../utils/mockData";
 import { RestaurantCard } from "./RestaurantCard";
-import { CORS_PROXY_URL } from "../utils/config";
 import { useOnlineStatus } from "../utils/useOnlineStatus";
 import { OFFLINE_MESSAGE } from "../utils/constants";
 export const Body = () => {
