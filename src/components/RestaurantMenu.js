@@ -40,10 +40,7 @@ export const RestaurantMenu = () => {
         <h3>Menu items</h3>
         {menuItems?.itemCards?.map((item) => (
           <div>
-            <li>
-              {item.card?.info?.name}
-              {/* {menuItems?.itemCards[0]?.card?.info?.price} */}
-            </li>
+            <li>{item.card?.info?.name}</li>
           </div>
         ))}
       </ul>
