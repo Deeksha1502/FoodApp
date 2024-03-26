@@ -3,10 +3,16 @@ import { resList } from "../utils/mockData";
 import { RestaurantCard } from "./RestaurantCard";
 import { useOnlineStatus } from "../utils/useOnlineStatus";
 import { OFFLINE_MESSAGE } from "../utils/constants";
+import { useProducts } from "../context/ContextItems";
 export const Body = () => {
-  const [listOfRestaurants, setListOfRestaurants] = useState(resList);
-  const [filteredRestaurant, setFilteredRestaurant] = useState(resList);
   const [searchText, setSearchText] = useState();
+
+  const {
+    listOfRestaurants,
+    setListOfRestaurants,
+    filteredRestaurant,
+    setFilteredRestaurant,
+  } = useProducts();
 
   useEffect(() => {
     fetchData();
