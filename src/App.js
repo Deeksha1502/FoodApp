@@ -7,6 +7,7 @@ import { Contact } from "./components/Contact.js";
 import { Error } from "./components/Error.js";
 import { createBrowserRouter, RouterProvider, Outlet } from "react-router-dom";
 import { RestaurantMenu } from "./components/RestaurantMenu.js";
+import { CartProvider } from "./context/ContextItems.js";
 
 const AppLayout = () => {
   return (
@@ -44,4 +45,8 @@ const appRouter = createBrowserRouter([
 ]);
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
-root.render(<RouterProvider router={appRouter} />);
+root.render(
+  <CartProvider>
+    <RouterProvider router={appRouter} />
+  </CartProvider>
+);

@@ -1,16 +1,23 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 import { Link } from "react-router-dom";
 import { LOGO_URL } from "../utils/constants";
 import { useOnlineStatus } from "../utils/useOnlineStatus";
+import { useProducts } from "../context/ContextItems";
+import { resList } from "../utils/mockData";
+
 export const Header = () => {
   const [btnNameReact, setBtnNameReact] = useState("Login");
   const onlineStatus = useOnlineStatus();
 
+  const { setFilteredRestaurant } = useProducts();
+
   return (
-    <div className="flex  justify-between bg-blue-700 shadow-md h-20">
-      <div className="logo-c ontainer">
+    <div className="flex justify-between bg-blue-700 shadow-md h-20">
+      <div className="logo-container">
         <Link to="/">
-          <img className="w-20 h-50" src={LOGO_URL} />
+          <div onClick={() => setFilteredRestaurant(resList)}>
+            <img className="w-20 h-50" src={LOGO_URL} />
+          </div>
         </Link>
       </div>
       <div className="flex items-center ">

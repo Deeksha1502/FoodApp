@@ -15,8 +15,7 @@ export const resMenu = [
             inStock: 1,
             isVeg: 1,
             price: 27900,
-            variants: {},
-            variantsV2: {},
+
             addons: [
               {
                 groupId: "127783112",
@@ -30,9 +29,6 @@ export const resMenu = [
                     isEnabled: 1,
                   },
                 ],
-                maxAddons: 1,
-                maxFreeAddons: -1,
-                minAddons: 1,
               },
               {
                 groupId: "127783113",
@@ -77,9 +73,6 @@ export const resMenu = [
                     isEnabled: 1,
                   },
                 ],
-                maxAddons: 1,
-                maxFreeAddons: -1,
-                minAddons: 1,
               },
               {
                 groupId: "127783114",
@@ -110,90 +103,8 @@ export const resMenu = [
                     isEnabled: 1,
                   },
                 ],
-                maxAddons: 3,
-                maxFreeAddons: -1,
               },
-              {
-                groupId: "127783115",
-                groupName: "Choose from Drink",
-                choices: [
-                  {
-                    id: "102027963",
-                    name: "Coke 330ml Can",
-                    inStock: 1,
-                    isVeg: 1,
-                    isEnabled: 1,
-                  },
-                  {
-                    id: "102027965",
-                    name: "Coke Zero 330ml Can",
-                    inStock: 1,
-                    isVeg: 1,
-                    isEnabled: 1,
-                  },
-                  {
-                    id: "102027962",
-                    name: "Sprite 330ml Can",
-                    inStock: 1,
-                    isVeg: 1,
-                    isEnabled: 1,
-                  },
-                  {
-                    id: "102027964",
-                    name: "Thums Up 330ml Can",
-                    inStock: 1,
-                    isVeg: 1,
-                    isEnabled: 1,
-                  },
-                  {
-                    id: "109455584",
-                    name: "Fanta 330ml Can",
-                    inStock: 1,
-                    isVeg: 1,
-                    isEnabled: 1,
-                  },
-                ],
-                maxAddons: 1,
-                maxFreeAddons: -1,
-                minAddons: 1,
-              },
-              {
-                groupId: "127783116",
-                groupName: "Choose from Side",
-                choices: [
-                  {
-                    id: "109455576",
-                    name: "Crispers- Salt n Pepper",
-                    inStock: 1,
-                    isVeg: 1,
-                    isEnabled: 1,
-                  },
-                  {
-                    id: "115375415",
-                    name: "Oatmeal Raisin Cookie (eggless)",
-                    inStock: 1,
-                    isVeg: 1,
-                    isEnabled: 1,
-                  },
-                  {
-                    id: "115375414",
-                    name: "Double Dark Chunk Chocolate Cookie (eggless)",
-                    inStock: 1,
-                    isVeg: 1,
-                    isEnabled: 1,
-                  },
-                  {
-                    id: "115375412",
-                    name: "Dark Chunk Chocolate Cookie (eggless)",
-                    inStock: 1,
-                    isVeg: 1,
-                    isEnabled: 1,
-                  },
-                ],
-                maxAddons: 1,
-                maxFreeAddons: -1,
-                minAddons: 1,
-              },
+
               {
                 groupId: "128273437",
                 groupName: "Steal Deals @99 (Save upto 34%)",
@@ -270,10 +181,89 @@ export const resMenu = [
           hideRestaurantDetails: true,
         },
       },
+      {
+        card: {
+          "@type": "type.googleapis.com/swiggy.presentation.food.v2.Dish",
+          info: {
+            id: "130391320",
+            name: "Bombay Grill Sandwich + Side + Coke",
+            category: "SUPER SAVER COMBOS - SAVE UPTO 46%",
+            description:
+              "Enjoy your favourite Grills sandwich with a choice of drink and a cookie or veg kebabs.",
+            imageId: "6f6f6cdda05e7a857f18bd8459f231ce",
+            inStock: 1,
+            isVeg: 1,
+            price: 28900,
+            variants: {},
+            variantsV2: {},
+            addons: [
+              {
+                groupId: "127783117",
+                groupName: "Choose from Sub",
+                choices: [
+                  {
+                    id: "109192591",
+                    name: "Bombay Grill 15cm",
+                    inStock: 1,
+                    isVeg: 1,
+                    isEnabled: 1,
+                  },
+                ],
+                maxAddons: 1,
+                maxFreeAddons: -1,
+                minAddons: 1,
+              },
+              {
+                groupId: "127783118",
+                groupName: "Choice of Bread",
+                choices: [
+                  {
+                    id: "109192572",
+                    name: "White Italian",
+                    inStock: 1,
+                    isVeg: 1,
+                    isEnabled: 1,
+                  },
+                  {
+                    id: "109192573",
+                    name: "Multigrain",
+                    inStock: 1,
+                    isVeg: 1,
+                    isEnabled: 1,
+                  },
+                  {
+                    id: "109455587",
+                    name: "Multigrain Honey Oats",
+                    price: 1000,
+                    inStock: 1,
+                    isVeg: 1,
+                    isEnabled: 1,
+                  },
+                  {
+                    id: "109455578",
+                    name: "Roasted Garlic",
+                    price: 1000,
+                    inStock: 1,
+                    isVeg: 1,
+                    isEnabled: 1,
+                  },
+                  {
+                    id: "109455581",
+                    name: "Parmesan Oregano",
+                    price: 1000,
+                    inStock: 1,
+                    isVeg: 1,
+                    isEnabled: 1,
+                  },
+                ],
+                maxAddons: 1,
+                maxFreeAddons: -1,
+                minAddons: 1,
+              },
+            ],
+          },
+        },
+      },
     ],
   },
-
-  {},
-
-  {},
 ];

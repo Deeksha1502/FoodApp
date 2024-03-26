@@ -1,16 +1,25 @@
-import { createContext } from "react";
+import { createContext, useContext, useState } from "react";
+import { resList } from "../utils/mockData";
 
+export const CartContext = createContext();
+export const CartProvider = ({ children }) => {
+  const [listOfRestaurants, setListOfRestaurants] = useState(resList);
+  const [filteredRestaurant, setFilteredRestaurant] = useState(resList);
 
-export const ContextItems = createContext();
-const [listOfRestaurants, setListOfRestaurants] = useState(resList);
-const [filteredRestaurant, setFilteredRestaurant] = useState(resList);
-const [searchText, setSearchText] = useState();
+  return (
+    <CartContext.Provider
+      value={{
+        listOfRestaurants,
+        setListOfRestaurants,
+        filteredRestaurant,
+        setFilteredRestaurant,
+      }}
+    >
+      {children}
+    </CartContext.Provider>
+  );
+};
 
-export const ContextItemFunc = (childreb) =>
-{
- 
-
-  listOfRestaurants, setListOfRestaurants,
-  filteredRestaurant, setFilteredRestaurant,
-  searchText, setSearchText
-}
+export const useProducts = () => {
+  return useContext(CartContext);
+};
