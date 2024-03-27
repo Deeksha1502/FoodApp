@@ -58,13 +58,13 @@ export const Body = () => {
         <div className="my-4 ml-6 px-16">
           <input
             type="text"
-            className="ring-blue-500 border-black border-2 rounded-md"
+            className="py-1 ml-2 border-2 border-black bg-white h-10 px-5 pr-16 rounded-lg text-sm focus:shadow-outline"
             value={searchText}
             onChange={(e) => setSearchText(e.target.value)}
           ></input>
 
           <button
-            className="px-4 py-1 ml-4 bg-blue-700 rounded-lg text-white"
+            className="py-1 ml-4 h-10 px-5 text-blue-700 transition-colors duration-150 border border-blue-700 rounded-lg focus:shadow-outline hover:bg-blue-700 hover:text-indigo-100 font-serif text-lg"
             onClick={filterList}
           >
             Search
@@ -72,7 +72,7 @@ export const Body = () => {
         </div>
         <div className="flex items-center">
           <button
-            className="px-4 py-1 bg-blue-700 text-white rounded-lg"
+            className="py-1 font-serif  h-10 px-5 text-blue-700 transition-colors duration-150 border border-blue-700 rounded-lg focus:shadow-outline hover:bg-blue-700 hover:text-indigo-100 text-lg"
             onClick={filterMenuRatings}
           >
             Top Rated restaurants
@@ -80,7 +80,7 @@ export const Body = () => {
         </div>
         <div className="px-4 m-4">
           <button
-            className="px-4 py-1 bg-green-700 text-white rounded-lg"
+            className="font-serif px-4 py-1 text-green-700 h-10 text-white-100 transition-colors duration-150 border border-green-700 rounded-lg focus:shadow-outline hover:bg-green-700 hover:text-green-100 text-lg"
             onClick={filterPureVeg}
           >
             Pure Veg
