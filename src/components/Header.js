@@ -1,9 +1,9 @@
 import React, { useState, useContext } from "react";
 import { Link } from "react-router-dom";
-import { LOGO_URL } from "../utils/constants";
 import { useOnlineStatus } from "../utils/useOnlineStatus";
 import { useProducts } from "../context/ContextItems";
 import { resList } from "../utils/mockData";
+import logo from "../assets/tastytrails.png";
 
 export const Header = () => {
   const [btnNameReact, setBtnNameReact] = useState("Login");
@@ -12,29 +12,30 @@ export const Header = () => {
   const { setFilteredRestaurant } = useProducts();
 
   return (
-    <div className="flex sticky top-0 bg-opacity-100 justify-between bg-slate-50 shadow-md h-24 text-lg mb-9 ">
+    <div className="flex sticky top-0 bg-white ml-11 h-24 text-lg mb-9 ">
       <div className="logo-container">
         <Link to="/">
           <div onClick={() => setFilteredRestaurant(resList)}>
-            <img className="w-24 max-w-xs h-auto" src={LOGO_URL} />
+            <img
+              className="mx-auto lg:ml-20 w-full lg:w-auto h-20 mt-2"
+              src={logo}
+            />
           </div>
         </Link>
       </div>
-      <div className="flex items-center ">
-        <ul className="sticky text-black flex p-4 m-4 font-serif">
-          <li className="px-4">Online Status: {onlineStatus ? "🟢" : "🔴"}</li>
-          <li className="px-4 ">
+      <div className="flex items-center ml-60">
+        <ul className="sticky text-black flex p-4 m-4 mr-4 lg:mr-8 font-Metrophobic font-semibold">
+          <li className="px-6">
             <Link to="/">Home</Link>
           </li>
-          <li className="px-4 ">
-            <Link to="/about">About Us</Link>
-          </li>
-          <li className="px-4 ">
+
+          <li className="px-6">
             <Link to="/contact">Contact Us</Link>
           </li>
-          <li className="px-4 ">Cart</li>
+          <li className="px-6">Cart</li>
+
           <button
-            className="login px-4 "
+            className="login px-6"
             onClick={() => {
               btnNameReact == "Login"
                 ? setBtnNameReact("Logout")
@@ -43,6 +44,10 @@ export const Header = () => {
           >
             {btnNameReact}
           </button>
+          <li className="px-6">
+            <Link to="/about">About Us</Link>
+          </li>
+          <li className="px-6">Online Status: {onlineStatus ? "🟢" : "🔴"}</li>
         </ul>
       </div>
     </div>
