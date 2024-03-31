@@ -1,269 +1,172 @@
+import subwayfirstdish from "../assets/dishes/subwayfirstdish.png";
+import subwayseconddish from "../assets/dishes/subwayseconddish.png";
+import subwaythirddish from "../assets/dishes/subwaythirddish.png";
+import subwayfourthdish from "../assets/dishes/subwayfourthdish.png";
+import subwayfifthdish from "../assets/dishes/subwayfifthdish.png";
+import mcdfirstdish from "../assets/dishes/mcdfirstdish.png";
+import mcdseconddish from "../assets/dishes/mcdseconddish.png";
+import mcdthirddish from "../assets/dishes/mcdthirddish.png";
+import mcdfourthdish from "../assets/dishes/mcdfourthdish.png";
+import mcdfifthdish from "../assets/dishes/mcdfifthdish.png";
+import califorfirstdish from "../assets/dishes/califorfirstdish";
+import califorseconddish from "../assets/dishes/califorseconddish";
+import a2bfirstdish from "../assets/dishes/a2bfirstdish.png"
+import a2bseconddish from "../assets/dishes/a2bseconddish.png"
+
+import a2bthirddish from "../assets/dishes/a2bthirddish.png"
+import a2bfourthdish from "../assets/dishes/a2bfourthdish.png"
+import a2bfifthdish from "../assets/dishes/a2bfifthdish.png"
+
+
+
 export const resMenu = [
   {
-    title: "Recommended",
-    itemCards: [
-      {
-        card: {
-          "@type": "type.googleapis.com/swiggy.presentation.food.v2.Dish",
-          info: {
-            id: "130391318",
-            name: "Delhi Tikki Sandwich + Side + Coke",
-            category: "SUPER SAVER COMBOS - SAVE UPTO 46%",
-            description:
-              "Enjoy your favourite Grills sandwich with a choice of drink and a cookie or veg kebabs.",
-            imageId: "3b1bb2e4ab7a6f145d675e811b4ee0a3",
-            inStock: 1,
-            isVeg: 1,
-            price: 27900,
+    restaurantId: "159159",
 
-            addons: [
-              {
-                groupId: "127783112",
-                groupName: "Choose from Sub",
-                choices: [
-                  {
-                    id: "109192592",
-                    name: "Delhi Tikki 15cm",
-                    inStock: 1,
-                    isVeg: 1,
-                    isEnabled: 1,
-                  },
-                ],
-              },
-              {
-                groupId: "127783113",
-                groupName: "Choice of Bread",
-                choices: [
-                  {
-                    id: "109192572",
-                    name: "White Italian",
-                    inStock: 1,
-                    isVeg: 1,
-                    isEnabled: 1,
-                  },
-                  {
-                    id: "109192573",
-                    name: "Multigrain",
-                    inStock: 1,
-                    isVeg: 1,
-                    isEnabled: 1,
-                  },
-                  {
-                    id: "109455587",
-                    name: "Multigrain Honey Oats",
-                    price: 1000,
-                    inStock: 1,
-                    isVeg: 1,
-                    isEnabled: 1,
-                  },
-                  {
-                    id: "109455578",
-                    name: "Roasted Garlic",
-                    price: 1000,
-                    inStock: 1,
-                    isVeg: 1,
-                    isEnabled: 1,
-                  },
-                  {
-                    id: "109455581",
-                    name: "Parmesan Oregano",
-                    price: 1000,
-                    inStock: 1,
-                    isVeg: 1,
-                    isEnabled: 1,
-                  },
-                ],
-              },
-              {
-                groupId: "127783114",
-                groupName: "Choose From Add Ons",
-                choices: [
-                  {
-                    id: "109192606",
-                    name: "Potato Roastie Patty",
-                    price: 6000,
-                    inStock: 1,
-                    isVeg: 1,
-                    isEnabled: 1,
-                  },
-                  {
-                    id: "109192593",
-                    name: "Cheese Pull (Mozzarella)",
-                    price: 4762,
-                    inStock: 1,
-                    isVeg: 1,
-                    isEnabled: 1,
-                  },
-                  {
-                    id: "109192574",
-                    name: "Cheese Slice",
-                    price: 2860,
-                    inStock: 1,
-                    isVeg: 1,
-                    isEnabled: 1,
-                  },
-                ],
-              },
+    id: "1",
+    restaurantName: "subway",
+    firstItem: "Delhi Tikki Sandwich + Side + Coke",
+    description:
+      "Enjoy your favourite Grills sandwich with a choice of drink and a cookie or veg kebabs.",
+    cloudinaryimageid: { subwayfirstdish },
 
-              {
-                groupId: "128273437",
-                groupName: "Steal Deals @99 (Save upto 34%)",
-                choices: [
-                  {
-                    id: "63207629",
-                    name: "2 Pc Oatmeal Raisin Cookies (SAVE upto Rs51)",
-                    price: 9900,
-                    inStock: 1,
-                    isVeg: 1,
-                    isEnabled: 1,
-                  },
-                  {
-                    id: "63207627",
-                    name: "2 Pc Dark Chunk Choc Cookies (SAVE upto Rs51)",
-                    price: 9900,
-                    inStock: 1,
-                    isVeg: 1,
-                    isEnabled: 1,
-                  },
-                  {
-                    id: "63207628",
-                    name: "2 Pc Double Dark Choc Cookies (SAVE upto Rs51)",
-                    price: 9900,
-                    inStock: 1,
-                    isVeg: 1,
-                    isEnabled: 1,
-                  },
-                  {
-                    id: "63207631",
-                    name: "Chicken Meatball - 5 Pc (SAVE upto Rs40).",
-                    price: 9900,
-                    inStock: 1,
-                    isEnabled: 1,
-                  },
-                  {
-                    id: "63207630",
-                    name: "Veg Kebab - 5 Pc (SAVE upto Rs30).",
-                    price: 9900,
-                    inStock: 1,
-                    isVeg: 1,
-                    isEnabled: 1,
-                  },
-                  {
-                    id: "109455564",
-                    name: "Crispers - Try New (SAVE Rs30)",
-                    price: 9900,
-                    inStock: 1,
-                    isVeg: 1,
-                    isEnabled: 1,
-                  },
-                ],
-                maxAddons: 6,
-                maxFreeAddons: -1,
-              },
-            ],
-            itemAttribute: {
-              vegClassifier: "VEG",
-            },
-            defaultPrice: 27900,
-            ribbon: {},
-            showImage: true,
-            itemBadge: {},
-            badgesV2: {},
-            ratings: {
-              aggregatedRating: {
-                rating: "4.0",
-                ratingCount: "5 ratings",
-                ratingCountV2: "5",
-              },
-            },
-          },
-          analytics: {},
-          hideRestaurantDetails: true,
-        },
-      },
-      {
-        card: {
-          "@type": "type.googleapis.com/swiggy.presentation.food.v2.Dish",
-          info: {
-            id: "130391320",
-            name: "Bombay Grill Sandwich + Side + Coke",
-            category: "SUPER SAVER COMBOS - SAVE UPTO 46%",
-            description:
-              "Enjoy your favourite Grills sandwich with a choice of drink and a cookie or veg kebabs.",
-            imageId: "6f6f6cdda05e7a857f18bd8459f231ce",
-            inStock: 1,
-            isVeg: 1,
-            price: 28900,
-            variants: {},
-            variantsV2: {},
-            addons: [
-              {
-                groupId: "127783117",
-                groupName: "Choose from Sub",
-                choices: [
-                  {
-                    id: "109192591",
-                    name: "Bombay Grill 15cm",
-                    inStock: 1,
-                    isVeg: 1,
-                    isEnabled: 1,
-                  },
-                ],
-                maxAddons: 1,
-                maxFreeAddons: -1,
-                minAddons: 1,
-              },
-              {
-                groupId: "127783118",
-                groupName: "Choice of Bread",
-                choices: [
-                  {
-                    id: "109192572",
-                    name: "White Italian",
-                    inStock: 1,
-                    isVeg: 1,
-                    isEnabled: 1,
-                  },
-                  {
-                    id: "109192573",
-                    name: "Multigrain",
-                    inStock: 1,
-                    isVeg: 1,
-                    isEnabled: 1,
-                  },
-                  {
-                    id: "109455587",
-                    name: "Multigrain Honey Oats",
-                    price: 1000,
-                    inStock: 1,
-                    isVeg: 1,
-                    isEnabled: 1,
-                  },
-                  {
-                    id: "109455578",
-                    name: "Roasted Garlic",
-                    price: 1000,
-                    inStock: 1,
-                    isVeg: 1,
-                    isEnabled: 1,
-                  },
-                  {
-                    id: "109455581",
-                    name: "Parmesan Oregano",
-                    price: 1000,
-                    inStock: 1,
-                    isVeg: 1,
-                    isEnabled: 1,
-                  },
-                ],
-                maxAddons: 1,
-                maxFreeAddons: -1,
-                minAddons: 1,
-              },
-            ],
-          },
-        },
-      },
-    ],
+    secondItem: "Bombay Grill Sandwich + Side + Coke",
+    description:
+      "Enjoy your favourite Grills sandwich with a choice of drink and a cookie or veg kebabs.",
+    cost: "Rs.279",
+    cloudinaryimageid: { subwayseconddish },
+
+    thirdItem: "3 Cheese Melt Sandwich + Side + Coke",
+    description:
+      "Enjoy your favourite Grills sandwich with a choice of drink and any choice of side.",
+    cost: "Rs.289",
+    cloudinaryimageid: { subwaythirddish },
+
+    fourthItem: "Paneer Achari Sandwich + Side + Coke",
+    description:
+      "Enjoy your favourite Hotseller sub with a choice of cookie and a choice of drink.",
+    cost: "Rs.379",
+    cloudinaryimageid: { subwayfourthdish },
+
+    fifthItem: "Crunchy Mexican Sandwich + Side + Coke",
+    description:
+      "Enjoy your favourite Hotseller sub with a choice of cookie and a choice of drink.",
+    cost: "Rs.359",
+    cloudinaryimageid: { subwayfifthdish },
   },
+
+  {
+    restaurantId: "151978",
+
+    id: "2",
+    restaurantName: "mcd",
+    firstItem: "2 McAloo Tikki Burger + 2 Fries (L)",
+    description:
+      "Enjoy your favourite Grills sandwich with a choice of drink and a cookie or veg kebabs.",
+    cost: "Rs.329",
+    cloudinaryimageid: { mcdfirstdish },
+
+    secondItem: "Burger Combo for 2: McVeggie Burger with Pizza McPuff",
+    description:
+      "Save big on your favourite sharing combo - 2 McVeggie Burger + 2 Fries (M) + Veg Pizza McPuff",
+    cost: "Rs.389",
+    cloudinaryimageid: { mcdseconddish },
+
+    thirdItem:
+      "McSpicy Paneer Burger + 2 Fries M + McAloo Tikki + Veg Pizza McPuff",
+    description:
+      "Get the best value in your meal for 2. Save big on your favourite sharing meal - McSpicy Paneer Burger + 2 Fries (M) + McAloo Tikki Burger + Veg Pizza McPuff",
+    cost: "Rs.359",
+    cloudinaryimageid: { mcdthirddish },
+
+    fourthItem:
+      "McSpicy Paneer Burger + McAloo Tikki Burger + Fries (L) + 2 Coke",
+    description:
+      "Get the best value in your meal for 2. Save big on your favourite sharing meal - McSpicy Paneer Burger + Fries (L) + 2 Coke + McAloo Tikki Burger",
+    cost: "Rs.329",
+    cloudinaryimageid: { mcdfourthdish },
+
+    fifthItem: "McVeggie Burger + McAloo Tikki Burger + Fries (L) + 2 Coke",
+    description:
+      "Get the best value in your meal for 2. Save big on your favourite sharing meal - McVeggie Burger + Fries (L) + 2 Coke + McAloo Tikki Burger",
+    cost: "Rs.389",
+    cloudinaryimageid: { mcdfifthdish },
+  },
+
+  {
+    restaurantId: "151971",
+
+    id: "3",
+    restaurantName: "california burrito",
+    firstItem: "Barbeque Paneer Rice Bowl (Regular)",
+    description:
+      "Serves 1 | Fresh cilantro rice and everything nice. Comes with your favourite toppings, fajita veggies like bell peppers and onions, pico de galla and BBQ Paneer.",
+    cost: "Rs.309",
+    cloudinaryimageid: { califorfirstdish },
+
+    secondItem: "Crispy Mushroom Rice Bowl (Regular)",
+    description:
+      "Serves 1 | Fresh cilantro rice and everything nice. Comes with your favourite toppings, fajita veggies like bell peppers and onions, pico de galla and crispy mushroom",
+    cost: "Rs.299",
+    cloudinaryimageid: { califorseconddish },
+
+    thirdItem: "Peri Peri Potato Rice Bowl (Regular)",
+    description:
+      "Serves 1 | Fresh cilantro rice and everything nice. Comes with your favourite toppings, fajita veggies like bell peppers and onions, pico de galla and peri peri potato",
+    cost: "Rs.359",
+    cloudinaryimageid: { califorseconddish },
+
+    fourthItem: "Barbeque Paneer Burrito (Regular)",
+    description:
+      "Serves 1 | Fresh cilantro rice and everything nice. Comes with your favourite toppings, fajita veggies like bell peppers and onions, pico de galla and peri peri potato",
+    cost: "Rs.329",
+    cloudinaryimageid: { califorfirstdish },
+
+    fifthItem: "Barbeque Paneer Salad (Mini)",
+    description:
+      "Serves 1 | A crisp bowl of fresh greens that includes a variety of goodness such as corn salsa, pico de galla, pinto beans and barbeque paneer.",
+    cost: "Rs.249",
+    cloudinaryimageid: { califorseconddish },
+  },
+
+  {
+    restaurantId: "151972",
+
+    id: "3",
+    restaurantName: "a2b",
+    firstItem: "Dhal fry",
+    description:
+      "",
+    cost: "Rs.220",
+    cloudinaryimageid: { a2bfirstdish },
+
+    firstItem: "Dhal fry",
+    description:
+      "",
+    cost: "Rs.220",
+    cloudinaryimageid: { a2bseconddish },
+
+    firstItem: "Malai Koftha",
+    description:
+      "",
+    cost: "Rs.255",
+    cloudinaryimageid: { a2bthirddish },
+
+    firstItem: "Paneer Fried Rice",
+    description:
+      "",
+    cost: "Rs.245",
+    cloudinaryimageid: { a2bfourthdish },
+
+    firstItem: "Veg Noodles",
+    description:
+      "",
+    cost: "Rs.220",
+    cloudinaryimageid: { a2bfifthdish },
+
+  },
+
+  {
+    
+  }
 ];
