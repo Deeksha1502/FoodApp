@@ -57,7 +57,7 @@ export const Body = () => {
       <div className="flex font-Metrophobic">
         <div className="flex items-center ml-24">
           <button
-            className="py-1 font-Metrophobic  h-10 px-5 text-blue-700 transition-colors duration-150 border border-blue-700 rounded-lg focus:shadow-outline hover:bg-blue-700 hover:text-indigo-100"
+            className="py-1 font-Metrophobic  h-10 px-5 text-blue-700 transition-colors duration-150 border border-blue-700  focus:shadow-lg hover:bg-blue-700 hover:text-indigo-100 text-lg"
             onClick={filterMenuRatings}
           >
             Top Rated restaurants
