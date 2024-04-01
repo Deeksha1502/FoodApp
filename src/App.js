@@ -10,12 +10,15 @@ import { RestaurantMenu } from "./components/RestaurantMenu.js";
 import { RestaurantMenuList } from "./components/RestaurantMenuList.js";
 import { CartProvider } from "./context/ContextItems.js";
 import { Login } from "./components/Login.js";
+import {Footer} from "./components/Footer.js"
+
 
 const AppLayout = () => {
   return (
     <div className="app">
       <Header />
       <Outlet />
+      <Footer/>
     </div>
   );
 };
