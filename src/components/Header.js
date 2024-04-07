@@ -12,15 +12,12 @@ export const Header = () => {
   const { setFilteredRestaurant } = useProducts();
 
   return (
-    <div className="flex flex-col lg:flex-row lg:justify-center">
-      <div className="flex sticky top-0 bg-white ml-11 h-24 text-lg mb-9">
+    <div className="flex flex-col sticky bg-white shadow-sm top-0 lg:flex-row lg:justify-center w-full">
+      <div className="flex bg-white h-20 text-lg">
         <div className="logo-container">
           <Link to="/">
             <div onClick={() => setFilteredRestaurant(resList)}>
-              <img
-                className="mx-auto lg:ml-20 w-full lg:w-auto h-20 mt-2"
-                src={logo}
-              />
+              <img className="mx-auto  w-full lg:w-auto h-16 mt-2" src={logo} />
             </div>
           </Link>
         </div>
