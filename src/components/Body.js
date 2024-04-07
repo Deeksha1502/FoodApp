@@ -4,6 +4,7 @@ import { RestaurantCard } from "./RestaurantCard";
 import { useOnlineStatus } from "../utils/useOnlineStatus";
 import { OFFLINE_MESSAGE } from "../utils/constants";
 import { useProducts } from "../context/ContextItems";
+import { Scrollbutton } from "../components/ScrollButton";
 export const Body = () => {
   const [searchText, setSearchText] = useState();
 
@@ -31,6 +32,7 @@ export const Body = () => {
     const filteredList = listOfRestaurants.filter((resList) =>
       resList.name.toLowerCase().includes(searchText.toLowerCase())
     );
+
     setFilteredRestaurant(filteredList);
   };
 
@@ -54,10 +56,10 @@ export const Body = () => {
 
   return (
     <div>
-      <div className="flex font-Metrophobic">
-        <div className="flex items-center ml-24">
+      <div className="flex mt-4 font-Metrophobic">
+        <div className="flex  items-center ml-24">
           <button
-            className="py-1 font-Metrophobic  h-10 px-5 text-blue-700 transition-colors duration-150 border border-blue-700  focus:shadow-lg hover:bg-blue-700 hover:text-indigo-100 text-lg"
+            className="truncate py-1 font-Metrophobic h-10 px-5 text-blue-700 transition-colors duration-150 border border-blue-700  focus:shadow-lg hover:bg-blue-700 hover:text-indigo-100 text-lg"
             onClick={filterMenuRatings}
           >
             Top Rated restaurants
@@ -65,7 +67,7 @@ export const Body = () => {
         </div>
         <div className="px-4 m-4">
           <button
-            className="font-Metrophobic px-4 py-1 text-green-700 h-10 text-white-100 transition-colors duration-150 border border-green-700 rounded-lg focus:shadow-outline hover:bg-green-700 hover:text-green-100 text-lg"
+            className="truncate font-Metrophobic px-4 py-1 text-green-700 h-10 text-white-100 transition-colors duration-150 border border-green-700 rounded-lg focus:shadow-outline hover:bg-green-700 hover:text-green-100 text-lg"
             onClick={filterPureVeg}
           >
             Pure Veg

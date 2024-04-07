@@ -11,3 +11,5 @@ export const RESTAURANT_MENU_API = (resId) =>
 
 export const OFFLINE_MESSAGE =
   "Looks like you are offline, Please check your internt connection";
+
+export const RESULT_NOT_FOUND = "No results found";

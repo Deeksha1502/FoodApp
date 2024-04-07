@@ -45,14 +45,21 @@ export const Footer = () => {
           Connect with us
           <ul>
             <li className="flex justify-center items-center  space-x-1.5 p-1.5">
-              <BsTwitter />
-              <FaLinkedin />
+              <a href="https://twitter.com/Deeksha__1502" target="_blank">
+                <BsTwitter />
+              </a>
+              <a
+                href="https://www.linkedin.com/in/deeksha-deepak-52009a203/"
+                target="_blank"
+              >
+                <FaLinkedin />
+              </a>
             </li>
           </ul>
         </div>
       </div>
-      <div className="bg-slate-100 py-4 mx-auto font-Metrophobic font-semibold text-lg flex justify-center items-center">
-        <p className="item-center justify-center text-center">
+      <div className="bg-slate-100 fixed bottom-0 mb-0 py-4 mx-auto font-Metrophobic font-semibold text-lg flex justify-center items-center">
+        <p className="item-center fixed bottom-0  top-[100vh] justify-center text-center">
           &copy; 2024 TastyTrails All rights reserved.
         </p>
       </div>
