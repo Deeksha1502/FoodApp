@@ -28,7 +28,7 @@ export const Scrollbutton = () => {
       } else if (scrolled <= 450) {
         setVisible(false);
       }
-    })
+    }),
   );
 
   return (

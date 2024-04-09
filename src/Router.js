@@ -5,10 +5,9 @@ import {
   Body,
   About,
   Contact,
-  Error,
+  ErrorDisplay,
   RestaurantMenuList,
   Login,
-  Scrollbutton,
 } from "./components";
 
 const AppLayout = () => {
@@ -16,7 +15,6 @@ const AppLayout = () => {
     <div className="app">
       <Header />
       <Outlet />
-      <Scrollbutton />
     </div>
   );
 };
@@ -47,6 +45,6 @@ export const appRouter = createBrowserRouter([
         element: <Login />,
       },
     ],
-    errorElement: <Error />,
+    errorElement: <ErrorDisplay />,
   },
 ]);
