@@ -17,7 +17,11 @@ export const Header = () => {
         <div className="logo-container">
           <Link to="/">
             <div onClick={() => setFilteredRestaurant(resList)}>
-              <img className="mx-auto  w-full lg:w-auto h-16 mt-2" src={logo} />
+              <img
+                className="mx-auto w-full lg:w-auto h-16 mt-2"
+                src={logo}
+                alt="logo"
+              />
             </div>
           </Link>
         </div>
