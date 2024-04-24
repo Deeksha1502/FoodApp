@@ -7,7 +7,7 @@ import { useProducts } from "../context/ContextItems";
 import { Footer } from "../components/Footer";
 import Background from "../assets/delivery1.png";
 
-export const Body = () => {
+export const BodyPage = () => {
   const [searchText, setSearchText] = useState(" ");
   const [errorMessage, setErrorMessage] = useState(" ");
 
@@ -78,8 +78,9 @@ export const Body = () => {
         </div>
         <img
           src={Background}
-          className=" shadow-lg dark:shadow-black/30 rounded-lg mx-auto w-3/4 lg:w-auto mr-40 mt-20 max-w-full h-1/2 "
-          alt="logo"
+          className="shadow-lg dark:shadow-black/30 rounded-lg mx-auto w-3/4 lg:w-auto mr-40 mt-20 max-w-full h-1/2"
+          alt="food logo"
+         
         />
       </div>
       <div className="flex mt-4 font-Metrophobic">
@@ -98,7 +99,7 @@ export const Body = () => {
             Pure Veg
           </button>
         </div>
-        <div className="flex-col my-4 px-40">
+        <div className="flex-col my-4 px-60">
           <input
             type="text"
             className="py-2 ml-2 border-2 border-blue bg-white h-11 px-5 pr-16 rounded-l-full text-sm focus:shadow-outline"

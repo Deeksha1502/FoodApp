@@ -4,8 +4,9 @@ export const RestaurantCard = (props) => {
   return (
     <div className="m-4 p-4 w-[250px] border-1 border-blue-700 bg-white cursor-pointer rounded-lg hover:bg-blue-50">
       <img
-        className="rounded-md cursor-pointer"
+        className="rounded-md cursor-pointer w-80 h-72"
         src={resList.cloudinaryImageId}
+        alt="res-logo"
       ></img>
       <div className="font-Metrophobic">
         <h3 className="border-l-red-400 font-bold py-4 text-lg">

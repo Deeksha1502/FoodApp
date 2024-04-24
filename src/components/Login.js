@@ -16,7 +16,7 @@ export const Login = () => {
     const message = checkValidation(
       email.current.value,
       password.current.value,
-      username.current.value
+      username.current.value,
     );
     setErrorMessage(message);
   };
@@ -27,6 +27,7 @@ export const Login = () => {
         <form
           onSubmit={(e) => e.preventDefault()}
           className="w-1/4 absolute p-12 bg-slate-100 mx-auto right-0 left-0"
+          label="input form"
         >
           <p className="font-bold text-2xl text-center mb-4">
             {isSigninForm ? "Sign In" : "Sign up"}
