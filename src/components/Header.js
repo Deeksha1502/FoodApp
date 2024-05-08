@@ -49,9 +49,9 @@ export const Header = () => {
             <li className="px-6">
               <Link to="/about">About</Link>
             </li>
-            <li className="px-6">
+            {/* <li className="px-6">
               Online Status: {onlineStatus ? "🟢" : "🔴"}
-            </li>
+            </li> */}
           </ul>
         </div>
       </div>
