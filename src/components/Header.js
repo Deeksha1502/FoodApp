@@ -6,9 +6,6 @@ import { resList } from "../utils/mockData";
 import logo from "../assets/tastytrails.png";
 
 export const Header = () => {
-  const [btnNameReact, setBtnNameReact] = useState("Login");
-  const onlineStatus = useOnlineStatus();
-
   const { setFilteredRestaurant } = useProducts();
 
   return (
@@ -36,22 +33,13 @@ export const Header = () => {
             </li>
             <li className="px-6">Cart</li>
 
-            <button
-              className="login px-6"
-              onClick={() => {
-                btnNameReact == "Login"
-                  ? setBtnNameReact("Logout")
-                  : setBtnNameReact("Login");
-              }}
-            >
-              {btnNameReact}
-            </button>
             <li className="px-6">
               <Link to="/about">About</Link>
             </li>
-            {/* <li className="px-6">
-              Online Status: {onlineStatus ? "🟢" : "🔴"}
-            </li> */}
+
+            <li className="px-6">
+              <Link to="/login">Login</Link>
+            </li>
           </ul>
         </div>
       </div>

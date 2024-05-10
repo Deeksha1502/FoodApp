@@ -6,8 +6,7 @@ import { OFFLINE_MESSAGE } from "../utils/constants";
 import { useProducts } from "../context/ContextItems";
 import { Footer } from "../components/Footer";
 import Background from "../assets/delivery1.png";
-
-export const BodyPage = () => {
+export const NewBodyPage = () => {
   const [searchText, setSearchText] = useState(" ");
   const [errorMessage, setErrorMessage] = useState(" ");
 
@@ -21,7 +20,6 @@ export const BodyPage = () => {
   useEffect(() => {
     fetchData();
   }, []);
-
   const fetchData = async () => {
     await new Promise((resolve) => {
       const resList = setTimeout(() => {
@@ -80,7 +78,6 @@ export const BodyPage = () => {
           src={Background}
           className="shadow-lg dark:shadow-black/30 rounded-lg mx-auto w-3/4 lg:w-auto mr-40 mt-20 max-w-full h-1/2"
           alt="food logo"
-         
         />
       </div>
       <div className="flex mt-4 font-Metrophobic">
@@ -99,10 +96,11 @@ export const BodyPage = () => {
             Pure Veg
           </button>
         </div>
-        <div className="flex-col my-4 px-60">
+        <div className=" grid-rows-1 flex my-4 px-60">
           <input
             type="text"
-            className="py-2 ml-2 border-2 border-blue bg-white h-11 px-5 pr-16 rounded-l-full text-sm focus:shadow-outline"
+            placeholder="Search..."
+            className="sm:inline focus:outline-none ml-2 border-2 border-blue bg-white h-12 px-5 pr-16 rounded-l-full text-sm focus:shadow-outline"
             value={searchText}
             onChange={(e) => {
               setErrorMessage(" ");
@@ -111,10 +109,20 @@ export const BodyPage = () => {
           ></input>
 
           <button
-            className="py-1 pb-4 border-2 font-Metrophobic h-10 px-5 rounded-r-full focus:shadow-outline  text-lg"
+            className=" pb-4 sm:inline focus:outline-none border-2 px-5 rounded-r-full focus:shadow-outline  text-lg"
             onClick={filterList}
           >
-            Search
+            <svg
+              fill="none"
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="3"
+              viewBox="0 0 24 24"
+              class="w-7 h-5 mt-2"
+            >
+              <path d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+            </svg>
           </button>
           <div className="text-red-500 w-40">{errorMessage}</div>
         </div>
