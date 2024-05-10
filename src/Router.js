@@ -2,7 +2,7 @@ import React from "react";
 import { createBrowserRouter, Outlet } from "react-router-dom";
 import {
   Header,
-  BodyPage,
+  NewBodyPage,
   About,
   Contact,
   ErrorDisplay,
@@ -26,7 +26,7 @@ export const appRouter = createBrowserRouter([
     children: [
       {
         path: "/",
-        element: <BodyPage />,
+        element: <NewBodyPage />,
       },
       {
         path: "/about",
