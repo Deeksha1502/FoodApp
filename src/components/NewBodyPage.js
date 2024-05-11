@@ -83,14 +83,16 @@ export const NewBodyPage = () => {
       <div className="flex mt-4 font-Metrophobic">
         <div className="flex items-center ml-24 space-x-12">
           <button
-            className="truncate py-1  font-Metrophobic h-10 px-5 text-blue-700 transition-colors duration-150 border border-blue-700  focus:shadow-lg hover:bg-blue-700 hover:text-indigo-100 text-lg"
+            className="truncate text-white bg-blue-700 hover:bg-blue-600 
+      font-medium rounded-full text-xl px-5 py-2.5 text-center mr-2 mb-2 flex"
             onClick={filterMenuRatings}
           >
-            Top Rated restaurants
+            Top Rated Restaurants
           </button>
 
           <button
-            className="truncate font-Metrophobic mr-8 px-4 py-1 text-green-700 h-10 text-white-100 transition-colors duration-150 border border-green-700  focus:shadow-outline hover:bg-green-700 hover:text-green-100 text-lg"
+            className="truncate text-white bg-green-700 hover:bg-green-600 
+      font-medium rounded-full text-xl px-5 py-2.5 text-center mr-2 mb-2 flex"
             onClick={filterPureVeg}
           >
             Pure Veg

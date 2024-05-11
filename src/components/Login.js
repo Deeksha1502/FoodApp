@@ -1,12 +1,16 @@
 import { useRef, useState } from "react";
 import { checkValidation } from "../utils/validate";
-
+import {
+  createUserWithEmailAndPassword,
+  signInWithEmailAndPassword,
+} from "firebase/auth";
+import { auth } from "../utils/firebase";
 export const Login = () => {
   const [isSigninForm, setIsSigninForm] = useState(false);
   const [errorMessage, setErrorMessage] = useState(null);
   const email = useRef(null);
   const password = useRef(null);
-  const username = useRef(null);
+  // const username = useRef(null);
 
   const toggleSigninButton = () => {
     setIsSigninForm(!isSigninForm);
@@ -16,9 +20,43 @@ export const Login = () => {
     const message = checkValidation(
       email.current.value,
       password.current.value,
-      username.current.value,
+      // username.current.value,
     );
     setErrorMessage(message);
+
+    if (message) return;
+
+    if (!isSigninForm) {
+      createUserWithEmailAndPassword(
+        auth,
+        email.current.value,
+        password.current.value,
+      )
+        .then((userCredential) => {
+          const user = userCredential.user;
+          console.log(user);
+        })
+        .catch((error) => {
+          const errorCode = error.code;
+          const errorMessage = error.message;
+          setErrorMessage(errorCode + "-" + errorMessage);
+        });
+    } else {
+      signInWithEmailAndPassword(
+        auth,
+        email.current.value,
+        password.current.value,
+      )
+        .then((userCredential) => {
+          const user = userCredential.user;
+          console.log(user);
+        })
+        .catch((error) => {
+          const errorCode = error.code;
+          const errorMessage = error.message;
+          setErrorMessage(errorCode + "-" + errorMessage);
+        });
+    }
   };
 
   return (
@@ -36,7 +74,7 @@ export const Login = () => {
             {!isSigninForm && (
               <input
                 type="text"
-                ref={username}
+                // ref={username}
                 placeholder="Full name"
                 className="p-2 my-2 w-full"
               />
