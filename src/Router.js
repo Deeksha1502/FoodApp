@@ -9,6 +9,8 @@ import {
   RestaurantMenuList,
   Login,
 } from "./components";
+import { resMenu } from "./utils/mockMenu";
+
 
 const AppLayout = () => {
   return (
@@ -38,7 +40,7 @@ export const appRouter = createBrowserRouter([
       },
       {
         path: "/restaurant/:resId",
-        element: <RestaurantMenuList />,
+        element: <RestaurantMenuList resMenu={resMenu} />,
       },
       {
         path: "/login",
