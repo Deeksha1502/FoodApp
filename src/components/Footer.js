@@ -37,7 +37,7 @@ export const Footer = () => {
 
             <li className="flex justify-center items-center  space-x-1.5 p-1.5">
               <AiOutlineMail />
-              tastytrails@gmail.com
+              deekshad1502@gmail.com
             </li>
           </ul>
         </div>
