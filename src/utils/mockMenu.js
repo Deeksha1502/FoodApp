@@ -15,7 +15,6 @@ import califorfourthdish from "../assets/dishes/califorfourthdish.png";
 import califorfifthdish from "../assets/dishes/califorfifthdish.png";
 import a2bfirstdish from "../assets/dishes/a2bfirstdish.png";
 import a2bseconddish from "../assets/dishes/a2bseconddish.png";
-
 import a2bthirddish from "../assets/dishes/a2bthirddish.png";
 import a2bfourthdish from "../assets/dishes/a2bfourthdish.png";
 import a2bfifthdish from "../assets/dishes/a2bfifthdish.png";
@@ -25,7 +24,7 @@ export const resMenu = [
     restaurantId: "159159",
 
     id: "1",
-    restaurantName: "subway",
+    restaurantName: "Subway",
     firstItem: "Delhi Tikki Sandwich + Side + Coke",
     firstDescription:
       "Enjoy your favourite Grills sandwich with a choice of drink and a cookie or veg kebabs.",
@@ -61,7 +60,7 @@ export const resMenu = [
     restaurantId: "151978",
 
     id: "2",
-    restaurantName: "mcd",
+    restaurantName: "McD",
     firstItem: "2 McAloo Tikki Burger + 2 Fries (L)",
     firstDescription:
       "Enjoy your favourite Grills sandwich with a choice of drink and a cookie or veg kebabs.",
@@ -99,7 +98,7 @@ export const resMenu = [
     restaurantId: "151971",
 
     id: "3",
-    restaurantName: "california burrito",
+    restaurantName: "California Burrito",
     firstDescription: "Barbeque Paneer Rice Bowl (Regular)",
     description:
       "Serves 1 | Fresh cilantro rice and everything nice. Comes with your favourite toppings, fajita veggies like bell peppers and onions, pico de galla and BBQ Paneer.",
@@ -135,7 +134,7 @@ export const resMenu = [
     restaurantId: "151972",
 
     id: "4",
-    restaurantName: "a2b",
+    restaurantName: "A2B",
     firstItem: "Rava Idly",
     firstDescription:
       "Serves 1 | Rava idly [1Nos] (also rave idly) is a variation of the popular South Indian breakfast item idly, made with Rava and curd Serve with aloo sagu and coconut chutney",

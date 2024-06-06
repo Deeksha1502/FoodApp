@@ -61,7 +61,7 @@ export const NewBodyPage = () => {
   console.log(Background);
 
   return (
-    <div>
+    <div className="bg-gradient-to-r from-violet-200 to-pink-200">
       <div className="flex flex-2 justify-between space-between col-span-3 mb-20">
         <div className="m-12 pl-14 w-2/5">
           <h3 className="mb-12 font-bold pt-16  text-6xl">

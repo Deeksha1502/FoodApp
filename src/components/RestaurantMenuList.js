@@ -10,7 +10,7 @@ export const RestaurantMenuList = (props) => {
 
   console.log(resMenu);
   return (
-    <div>
+    <div className="min-h-screen bg-gradient-to-r from-violet-200 to-pink-200">
       <div className="w-6/12 mx-auto my-4 shadow-lg p-4 bg-gray-50 text-bold flex justify-center items-center text-center">
         <ul>
           {resMenu.map((item) => (
