@@ -27,18 +27,19 @@ export const Header = () => {
             <li className="px-6">
               <Link to="/">Home</Link>
             </li>
-
             <li className="px-6">
-              <Link to="/contact">Contact</Link>
+              <Link to="/menu">Menu</Link>
             </li>
-            <li className="px-6">Cart</li>
 
-            <li className="px-6">
-              <Link to="/about">About</Link>
+            <li className="px-6 cursor-pointer">
+              <Link to="/cart">Cart</Link>
             </li>
 
             <li className="px-6">
               <Link to="/login">Login</Link>
+            </li>
+            <li className="px-6">
+              <Link to="/contact">Contact</Link>
             </li>
           </ul>
         </div>

@@ -3,14 +3,15 @@ import { createBrowserRouter, Outlet } from "react-router-dom";
 import {
   Header,
   NewBodyPage,
-  About,
   Contact,
+  Cart,
   ErrorDisplay,
   RestaurantMenuList,
+
   Login,
+ 
 } from "./components";
 import { resMenu } from "./utils/mockMenu";
-
 
 const AppLayout = () => {
   return (
@@ -31,16 +32,16 @@ export const appRouter = createBrowserRouter([
         element: <NewBodyPage />,
       },
       {
-        path: "/about",
-        element: <About />,
+        path: "/menu",
+        element: <RestaurantMenuList resMenu={resMenu} />,
       },
       {
         path: "/contact",
         element: <Contact />,
       },
       {
-        path: "/restaurant/:resId",
-        element: <RestaurantMenuList resMenu={resMenu} />,
+        path: "/cart",
+        element: <Cart />,
       },
       {
         path: "/login",
