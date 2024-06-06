@@ -9,8 +9,10 @@ export const Header = () => {
   const { setFilteredRestaurant } = useProducts();
 
   return (
-    <div className="flex flex-col sticky bg-white shadow-sm top-0 lg:flex-row lg:justify-center w-full">
-      <div className="flex bg-white h-20 text-lg">
+    <div className="flex flex-col sticky 
+    bg-violet-200 bg-opacity-30 rounded-lg  backdrop-blur-sm backdrop-filter border border-pink-200 border-opacity-40 top-0 lg:flex-row lg:justify-center w-full">
+      <div className="flex 
+bg-pink-200 bg-opacity-30 rounded-lg  backdrop-blur-sm backdrop-filter border border-pink-200 border-opacity-40 h-20 text-lg">
         <div className="logo-container">
           <Link to="/">
             <div onClick={() => setFilteredRestaurant(resList)}>

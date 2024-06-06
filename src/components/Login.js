@@ -60,11 +60,11 @@ export const Login = () => {
   };
 
   return (
-    <div>
-      <div className="pt-10">
+   
+      <div className="min-h-screen bg-gradient-to-r from-violet-200 to-pink-200 flex items-center justify-center">
         <form
           onSubmit={(e) => e.preventDefault()}
-          className="w-1/4 absolute p-12 bg-slate-100 mx-auto right-0 left-0"
+          className="w-1/4 p-12 bg-slate-50 mx-auto right-0 left-0 mb-12 m-12 h-full"
           label="input form"
         >
           <p className="font-bold text-2xl text-center mb-4">
@@ -104,6 +104,6 @@ export const Login = () => {
           </div>
         </form>
       </div>
-    </div>
+  
   );
 };
