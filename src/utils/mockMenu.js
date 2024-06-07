@@ -18,6 +18,12 @@ import a2bseconddish from "../assets/dishes/a2bseconddish.png";
 import a2bthirddish from "../assets/dishes/a2bthirddish.png";
 import a2bfourthdish from "../assets/dishes/a2bfourthdish.png";
 import a2bfifthdish from "../assets/dishes/a2bfifthdish.png";
+import theofirstdish from "../assets/dishes/theofirstdish.png";
+import theoseconddish from "../assets/dishes/theoseconddish.png";
+
+import empirefirstdish from "../assets/dishes/empirefirstdish.png";
+import empireseconddish from "../assets/dishes/empireseconddish.png";
+
 
 export const resMenu = [
   {
@@ -37,23 +43,23 @@ export const resMenu = [
     secondItemCost: "Rs.279",
     secondCloudinaryimageid: subwayseconddish,
 
-    thirdItem: "3 Cheese Melt Sandwich + Side + Coke",
-    thirdDescription:
-      "Enjoy your favourite Grills sandwich with a choice of drink and any choice of side.",
-    thirdItemCost: "Rs.289",
-    thirdCloudinaryimageid: subwaythirddish,
+    // thirdItem: "3 Cheese Melt Sandwich + Side + Coke",
+    // thirdDescription:
+    //   "Enjoy your favourite Grills sandwich with a choice of drink and any choice of side.",
+    // thirdItemCost: "Rs.289",
+    // thirdCloudinaryimageid: subwaythirddish,
 
-    fourthItem: "Paneer Achari Sandwich + Side + Coke",
-    fourthDescription:
-      "Enjoy your favourite Hotseller sub with a choice of cookie and a choice of drink.",
-    fourthItemCost: "Rs.379",
-    fourthCloudinaryimageid: subwayfourthdish,
+    // fourthItem: "Paneer Achari Sandwich + Side + Coke",
+    // fourthDescription:
+    //   "Enjoy your favourite Hotseller sub with a choice of cookie and a choice of drink.",
+    // fourthItemCost: "Rs.379",
+    // fourthCloudinaryimageid: subwayfourthdish,
 
-    fifthItem: "Crunchy Mexican Sandwich + Side + Coke",
-    fifthDescription:
-      "Enjoy your favourite Hotseller sub with a choice of cookie and a choice of drink.",
-    fifthItemCost: "Rs.359",
-    fifthCloudinaryimageid: subwayfifthdish,
+    // fifthItem: "Crunchy Mexican Sandwich + Side + Coke",
+    // fifthDescription:
+    //   "Enjoy your favourite Hotseller sub with a choice of cookie and a choice of drink.",
+    // fifthItemCost: "Rs.359",
+    // fifthCloudinaryimageid: subwayfifthdish,
   },
 
   {
@@ -164,5 +170,71 @@ export const resMenu = [
       "Serves 1 | Crispy donut-shaped deep-fried fritters made of ground black lentil batter mixed with finely diced onions, peppercorn, green chilies served with a spicy sambar and chutney",
     fifthItemCost: "Rs.70",
     fifthCloudinaryimageid: a2bfifthdish,
+  },
+
+  {
+    restaurantId: "151978",
+
+    id: "5",
+    restaurantName: "Theobroma",
+    firstItem: "Eggless Dutch Truffle Cake [1/2kg]",
+    firstDescription: "Dark chocolate ganache with chocolate sponge.",
+    firstItemCost: "Rs.625",
+    firstCloudinaryimageid: theofirstdish,
+
+    secondItem: "Chocoholic Cake [1/2kg]",
+    secondDescription:
+      "Three layers of chocolate mousse: white, milk and dark chocolate mousse layered in this crowd-favourite cake.",
+    secondItemCost: "Rs.725",
+    secondCloudinaryimageid: theoseconddish,
+  },
+
+  {
+    restaurantId: "151979",
+
+    id: "6",
+    restaurantName: "Hotel Empire",
+    firstItem: "Empire Special Chicken Kebab",
+    firstDescription: "Empire Special Chicken Kebab Empire Classic Dry",
+    firstItemCost: "Rs.110",
+    firstCloudinaryimageid: empirefirstdish,
+
+    secondItem: "Chicken Biryani (Regular), Raita & Popcorn Kebab",
+    secondDescription:
+      "Chicken Biriyani (Regular), Raitha, Popcorn Kebab (5 Pcs)",
+    secondItemCost: "Rs.215",
+    secondCloudinaryimageid: empireseconddish,
+  },
+
+  {
+    restaurantId: "151980",
+
+    id: "7",
+    restaurantName: "Burger King",
+    firstItem: "Eggless Dutch Truffle Cake [1/2kg]",
+    firstDescription: "Dark chocolate ganache with chocolate sponge.",
+    firstItemCost: "Rs.625",
+
+    secondItem: "Chocoholic Cake [1/2kg]",
+    secondDescription:
+      "Three layers of chocolate mousse: white, milk and dark chocolate mousse layered in this crowd-favourite cake.",
+    secondItemCost: "Rs.725",
+  },
+
+  {
+    restaurantId: "151978",
+
+    id: "5",
+    restaurantName: "Truffles",
+    firstItem: "Caesar salad",
+    firstDescription: "Dark chocolate ganache with chocolate sponge.",
+    firstItemCost: "Rs.625",
+
+
+    secondItem: "Aglio pasta",
+    secondDescription:
+      "Three layers of chocolate mousse: white, milk and dark chocolate mousse layered in this crowd-favourite cake.",
+    secondItemCost: "Rs.725",
+   
   },
 ];

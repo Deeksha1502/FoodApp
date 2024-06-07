@@ -17,28 +17,28 @@ export const RestaurantMenuList = (props) => {
   };
   return (
     <div className="min-h-screen bg-gradient-to-r from-violet-200 to-pink-200">
-      <div className="w-6/12 mx-auto my-4 shadow-lg p-4 bg-gray-50 text-bold flex justify-center items-center text-center">
+      <div className="w-6/12 mx-auto my-4 shadow-lg p-4 bg-gradient-to-r from-violet-200 to-pink-200 text-bold flex items-center">
         <ul>
           {resMenu.map((item) => (
             <li key={item.id}>
-              <span className="text-3xl my-6 font-bold ">
+              <span className="text-3xl my-6 font-bold">
                 {item.restaurantName}
               </span>
               <div
-                className="flex flex-col-2 justify-between py-6 cursor-pointer"
+                className=" flex flex-col-2 justify-between py-6 cursor-pointer"
                 onClick={handleClick}
               >
-                <span className="flex justify-between font-bold text-xl">
+                <span className="lg:pr-96 md:pr-36 font-bold text-xl">
                   Recommended
                 </span>
                 <span>⬇</span>
               </div>
               {showItems && (
                 <div>
-                  <div className="w-9/12 mx-auto my-4 shadow-lg p-4 bg-gray-50  ">
-                    <h4 className="font-bold">{item.firstItem}</h4>
-                    <p className="font-bold">{item.firstDescription}</p>
-                    <p>Cost: {item.firstItemCost}</p>
+                  <div className="w-9/12 mx-auto my-4 shadow-lg p-4 bg-gradient-to-r from-violet-200 to-pink-200 ">
+                    <h4 className="font-bold p-3">{item.firstItem}</h4>
+                    <p className="font-bold p-3">{item.firstDescription}</p>
+                    <p className="font-bold p-3">Cost: {item.firstItemCost}</p>
 
                     <div className="absolute">
                       <button
@@ -53,17 +53,20 @@ export const RestaurantMenuList = (props) => {
                       <img
                         src={item.firstCloudinaryimageid}
                         alt={item.firstItem}
-                        className="w-28 h-28"
+                        className="w-28 h-28 m-3"
                       />
                     )}
                   </div>
-                  <div className="w-9/12 mx-auto my-4 shadow-lg p-4 bg-gray-50">
-                    <h4 className="font-bold">{item.secondItem}</h4>
-                    <p className="font-bold">{item.secondDescription}</p>
-                    <p>Cost: {item.secondItemCost}</p>
+                  <div className="w-9/12 mx-auto my-4 shadow-lg p-4 bg-gradient-to-r from-violet-200 to-pink-200">
+                    <h4 className="font-bold p-3">{item.secondItem}</h4>
+                    <p className="font-bold p-3">{item.secondDescription}</p>
+                    <p className="font-bold p-3">Cost: {item.secondItemCost}</p>
 
                     <div className="absolute">
-                      <button className="p-2 bg-slate-200  m-auto rounded-lg">
+                      <button
+                        className="p-1 bg-slate-200  m-auto rounded-lg"
+                        onClick={handleAddButton}
+                      >
                         Add +
                       </button>
                     </div>
@@ -76,60 +79,7 @@ export const RestaurantMenuList = (props) => {
                       />
                     )}
                   </div>
-                  <div className="w-9/12 mx-auto my-4 shadow-lg p-4 bg-gray-50">
-                    <h4 className="font-bold">{item.thirdItem}</h4>
-                    <p className="font-bold">{item.thirdDescription}</p>
-                    <p>Cost: {item.thirdItemCost}</p>
-                    <div className="absolute">
-                      <button className="p-2 bg-slate-200  m-auto rounded-lg">
-                        Add +
-                      </button>
-                    </div>
 
-                    {item.thirdCloudinaryimageid && (
-                      <img
-                        src={item.thirdCloudinaryimageid}
-                        alt={item.thirdItem}
-                        className=" justify-center items-center object-left w-28 h-28"
-                      />
-                    )}
-                  </div>
-                  <div className="w-9/12 mx-auto my-4 shadow-lg p-4 bg-gray-50">
-                    <h4 className="font-bold">{item.fourthItem}</h4>
-                    <p className="font-bold">{item.fourthDescription}</p>
-                    <p>Cost: {item.fourthItemCost}</p>
-                    <div className="absolute">
-                      <button className="p-2 bg-slate-200  m-auto rounded-lg">
-                        Add +
-                      </button>
-                    </div>
-
-                    {item.fourthCloudinaryimageid && (
-                      <img
-                        src={item.fourthCloudinaryimageid}
-                        alt={item.fourthItem}
-                        className=" justify-center items-center object-left w-28 h-28"
-                      />
-                    )}
-                  </div>
-                  <div className="w-9/12 mx-auto my-4 shadow-lg p-4 bg-gray-50">
-                    <h4 className="font-bold">{item.fifthItem}</h4>
-                    <p className="font-bold">{item.fifthDescription}</p>
-                    <p>Cost: {item.fifthItemCost}</p>
-                    <div className="absolute">
-                      <button className="p-2 bg-slate-200 shadow-lg mx-16 m-auto rounded-lg">
-                        Add +
-                      </button>
-                    </div>
-
-                    {item.fifthCloudinaryimageid && (
-                      <img
-                        src={item.fifthCloudinaryimageid}
-                        alt={item.fifthItem}
-                        className=" justify-center items-center object-left w-28 h-28"
-                      />
-                    )}
-                  </div>
                   <hr class="h-px my-8 bg-gray-200 border-0 dark:bg-gray-700"></hr>
                 </div>
               )}
