@@ -1,5 +1,6 @@
 import { useState } from "react";
-
+import { useDispatch } from "react-redux";
+import { addItem } from "../utils/cartSlice";
 
 export const RestaurantMenuList = (props) => {
   const { resMenu } = props;
@@ -9,6 +10,11 @@ export const RestaurantMenuList = (props) => {
   const [showItems, setShowItems] = useState(false);
 
   console.log(resMenu);
+  const dispatch = useDispatch();
+
+  const handleAddButton = () => {
+    dispatch(addItem());
+  };
   return (
     <div className="min-h-screen bg-gradient-to-r from-violet-200 to-pink-200">
       <div className="w-6/12 mx-auto my-4 shadow-lg p-4 bg-gray-50 text-bold flex justify-center items-center text-center">
@@ -21,7 +27,6 @@ export const RestaurantMenuList = (props) => {
               <div
                 className="flex flex-col-2 justify-between py-6 cursor-pointer"
                 onClick={handleClick}
-                
               >
                 <span className="flex justify-between font-bold text-xl">
                   Recommended
@@ -36,7 +41,10 @@ export const RestaurantMenuList = (props) => {
                     <p>Cost: {item.firstItemCost}</p>
 
                     <div className="absolute">
-                      <button className="p-1 bg-slate-200  m-auto rounded-lg">
+                      <button
+                        className="p-1 bg-slate-200  m-auto rounded-lg"
+                        onClick={handleAddButton}
+                      >
                         Add +
                       </button>
                     </div>

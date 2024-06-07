@@ -4,15 +4,24 @@ import { useOnlineStatus } from "../utils/useOnlineStatus";
 import { useProducts } from "../context/ContextItems";
 import { resList } from "../utils/mockData";
 import logo from "../assets/tastytrails.png";
+import { useSelector } from "react-redux";
 
 export const Header = () => {
+  const cartItems = useSelector((store) => store.cart.items);
+
+  
+
   const { setFilteredRestaurant } = useProducts();
 
   return (
-    <div className="flex flex-col sticky 
-    bg-violet-200 bg-opacity-30 rounded-lg  backdrop-blur-sm backdrop-filter border border-pink-200 border-opacity-40 top-0 lg:flex-row lg:justify-center w-full">
-      <div className="flex 
-bg-pink-200 bg-opacity-30 rounded-lg  backdrop-blur-sm backdrop-filter border border-pink-200 border-opacity-40 h-20 text-lg">
+    <div
+      className="flex flex-col sticky 
+    bg-violet-200 bg-opacity-30 rounded-lg  backdrop-blur-sm backdrop-filter border border-pink-200 border-opacity-40 top-0 lg:flex-row lg:justify-center w-full"
+    >
+      <div
+        className="flex 
+bg-pink-200 bg-opacity-30 rounded-lg  backdrop-blur-sm backdrop-filter border border-pink-200 border-opacity-40 h-20 text-lg"
+      >
         <div className="logo-container">
           <Link to="/">
             <div onClick={() => setFilteredRestaurant(resList)}>
@@ -34,7 +43,7 @@ bg-pink-200 bg-opacity-30 rounded-lg  backdrop-blur-sm backdrop-filter border bo
             </li>
 
             <li className="px-6 cursor-pointer">
-              <Link to="/cart">Cart</Link>
+              <Link to="/cart">Cart - {cartItems.length} items</Link>
             </li>
 
             <li className="px-6">
