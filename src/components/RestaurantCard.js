@@ -2,7 +2,7 @@ export const RestaurantCard = (props) => {
   const { resList } = props;
 
   return (
-    <div className="m-4 p-4 w-[250px] border-1 border-blue-700 bg-white cursor-pointer rounded-lg hover:bg-blue-50">
+    <div className="m-4 p-4 w-[250px] border-1 border-blue-700 bg-white cursor-pointer rounded-lg hover:bg-violet-50">
       <img
         className="rounded-md cursor-pointer w-80 h-72"
         src={resList.cloudinaryImageId}
@@ -25,7 +25,7 @@ export const RestaurantCard = (props) => {
           <p className="font-semibold">Cost For Two:</p> {resList.costForTwo}
         </h4>
         <h4>
-          <p className="font-semibold">Delivery Time:</p>{" "}
+          <p className="font-semibold">Delivery Time:</p>
           {resList.sla.slaString}
         </h4>
       </div>
