@@ -1,4 +1,4 @@
-import React, { useState, useContext } from "react";
+import React, { useContext } from "react";
 import { Link } from "react-router-dom";
 import { useOnlineStatus } from "../utils/useOnlineStatus";
 import { useProducts } from "../context/ContextItems";
@@ -8,8 +8,7 @@ import { useSelector } from "react-redux";
 
 export const Header = () => {
   const cartItems = useSelector((store) => store.cart.items);
-
-  
+  console.log(cartItems);
 
   const { setFilteredRestaurant } = useProducts();
 

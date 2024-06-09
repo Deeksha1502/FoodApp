@@ -3,7 +3,7 @@ import { useDispatch } from "react-redux";
 import { addItem } from "../utils/cartSlice";
 
 export const RestaurantMenuList = (props) => {
-  const [showItems, setShowItems] = useState(false);
+  const [showItems, setShowItems] = useState();
 
   const { resMenu } = props;
   const handleToggle = (index) => {
@@ -15,20 +15,21 @@ export const RestaurantMenuList = (props) => {
 
   const dispatch = useDispatch();
 
-  const handleAddButton = () => {
-    dispatch(addItem());
+  const handleAddButton = (resMenu) => {
+    dispatch(addItem(resMenu));
   };
   return (
+    
     <div className="min-h-screen bg-gradient-to-r from-violet-200 to-pink-200">
       <div className="w-6/12 mx-auto my-4 shadow-lg p-4 bg-gradient-to-r from-violet-200 to-pink-200 text-bold flex items-center">
         <ul>
-          {resMenu.map((item, index) => (
+          {resMenu?.map((item, index) => (
             <li key={item.id}>
               <span className="text-3xl my-6 font-bold">
                 {item.restaurantName}
               </span>
               <div
-                className=" flex flex-col-2 justify-between py-6 cursor-pointer"
+                className="flex flex-col-2 justify-between py-6 cursor-pointer"
                 onClick={() => handleToggle(index)}
               >
                 <span className="lg:pr-96 md:pr-36 font-bold text-xl">
@@ -48,7 +49,7 @@ export const RestaurantMenuList = (props) => {
 
                       <div className="absolute">
                         <button
-                          className="p-1 bg-slate-200  m-auto rounded-lg"
+                          className="p-1 bg-slate-200  m-auto rounded-lg font-bold"
                           onClick={() => handleAddButton(resMenu)}
                         >
                           Add +
@@ -72,7 +73,7 @@ export const RestaurantMenuList = (props) => {
 
                       <div className="absolute">
                         <button
-                          className="p-1 bg-slate-200  m-auto rounded-lg"
+                          className="p-1 bg-slate-200 m-auto rounded-lg font-bold"
                           onClick={handleAddButton}
                         >
                           Add +
@@ -83,7 +84,7 @@ export const RestaurantMenuList = (props) => {
                         <img
                           src={item.secondCloudinaryimageid}
                           alt={item.secondItem}
-                          className=" justify-center items-center object-left w-28 h-28"
+                          className="w-28 h-28 pl-2 pt-2"
                         />
                       )}
                     </div>

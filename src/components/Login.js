@@ -61,10 +61,10 @@ export const Login = () => {
 
   return (
    
-      <div className="min-h-screen bg-gradient-to-r from-violet-200 to-pink-200 flex items-center justify-center">
+      <div className="h-screen bg-gradient-to-r from-violet-200 to-pink-200 flex items-center justify-center">
         <form
           onSubmit={(e) => e.preventDefault()}
-          className="w-1/4 p-12 bg-slate-50 mx-auto right-0 left-0 mb-12 m-12 h-full"
+          className="w-1/4 p-12 shadow-lg bg-gradient-to-r from-violet-200 to-pink-200 mx-auto right-0 left-0 rounded-md"
           label="input form"
         >
           <p className="font-bold text-2xl text-center mb-4">
@@ -93,13 +93,13 @@ export const Login = () => {
               className="p-2 my-2 w-full"
             />
             <p className="text-red-500">{errorMessage}</p>
-            <button className="mt-4 p-4 border-2" onClick={handleButtonClick}>
+            <button className="mt-4 p-4 border-2 font-bold" onClick={handleButtonClick}>
               {isSigninForm ? "Sign In" : "Sign up"}
             </button>
-            <p onClick={toggleSigninButton} className="mt-6 cursor-pointer">
+            <p onClick={toggleSigninButton} className="mt-6 font-bold cursor-pointer">
               {isSigninForm
                 ? "New User? Sign up now"
-                : "Already registerd? Signin now"}
+                : "Already registered? Signin now"}
             </p>
           </div>
         </form>
