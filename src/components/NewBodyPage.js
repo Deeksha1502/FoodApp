@@ -61,10 +61,10 @@ export const NewBodyPage = () => {
   console.log(Background);
 
   return (
-    <div className="bg-gradient-to-r from-violet-200 to-pink-200">
-      <div className="flex flex-2 justify-between space-between col-span-3 mb-20">
-        <div className="m-12 pl-14 w-2/5">
-          <h3 className="mb-12 font-bold pt-16  text-6xl">
+    <div className="bg-gradient-to-r from-violet-200 to-pink-200 min-w-full">
+      <div className="flex flex-2 justify-between space-between col-span-3 mb-20 min-w-full">
+        <div className="m-12 pl-14 w-auto">
+          <h3 className="mb-12 font-bold lg:pt-16 md:pt-9 lg:text-6xl md:text-3xl">
             Discover a world of flavors delivered conveniently at your door
             step!
           </h3>
@@ -76,7 +76,7 @@ export const NewBodyPage = () => {
         </div>
         <img
           src={Background}
-          className="shadow-lg dark:shadow-black/30 rounded-lg mx-auto w-3/4 lg:w-auto mr-40 mt-20 max-w-full h-1/2"
+          className="shadow-lg dark:shadow-black/30 rounded-lg mx-auto  lg:w-auto mr-40 mt-20 max-w-full h-1/2 md:w-96 sm:w-96"
           alt="food logo"
         />
       </div>
@@ -98,7 +98,7 @@ export const NewBodyPage = () => {
             Pure Veg
           </button>
         </div>
-        <div className=" grid-rows-1 flex my-4 px-60">
+        <div className="grid-rows-1 flex my-4 lg:px-60">
           <input
             type="text"
             placeholder="Search..."
