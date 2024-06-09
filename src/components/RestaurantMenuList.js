@@ -3,13 +3,13 @@ import { useDispatch } from "react-redux";
 import { addItem } from "../utils/cartSlice";
 
 export const RestaurantMenuList = (props) => {
+  const [showItems, setShowItems] = useState(false);
+
   const { resMenu } = props;
   const handleClick = () => {
     setShowItems(!showItems);
   };
-  const [showItems, setShowItems] = useState(false);
 
-  console.log(resMenu);
   const dispatch = useDispatch();
 
   const handleAddButton = () => {
@@ -43,7 +43,7 @@ export const RestaurantMenuList = (props) => {
                     <div className="absolute">
                       <button
                         className="p-1 bg-slate-200  m-auto rounded-lg"
-                        onClick={handleAddButton}
+                        onClick={() => handleAddButton(resMenu)}
                       >
                         Add +
                       </button>
