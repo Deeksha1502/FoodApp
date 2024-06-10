@@ -1,6 +1,5 @@
 import React, { useContext } from "react";
 import { Link } from "react-router-dom";
-import { useOnlineStatus } from "../utils/useOnlineStatus";
 import { useProducts } from "../context/ContextItems";
 import { resList } from "../utils/mockData";
 import logo from "../assets/tastytrails.png";

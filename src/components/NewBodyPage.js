@@ -1,14 +1,15 @@
 import { useEffect, useState } from "react";
 import { resList } from "../utils/mockData";
 import { RestaurantCard } from "./RestaurantCard";
-import { useOnlineStatus } from "../utils/useOnlineStatus";
-import { OFFLINE_MESSAGE } from "../utils/constants";
 import { useProducts } from "../context/ContextItems";
 import { Footer } from "../components/Footer";
 import Background from "../assets/delivery1.png";
+import { useDebounce } from "../utils/useDebounce";
 export const NewBodyPage = () => {
   const [searchText, setSearchText] = useState(" ");
   const [errorMessage, setErrorMessage] = useState(" ");
+
+  const debounceSearchText = useDebounce(searchText, 500);
 
   const {
     listOfRestaurants,
@@ -30,19 +31,16 @@ export const NewBodyPage = () => {
   };
 
   const filterList = () => {
-    if (searchText === " " || searchText === undefined) {
+    if (debounceSearchText === " " || debounceSearchText === undefined) {
       setErrorMessage("Please enter valid text");
+      setFilteredRestaurant(listOfRestaurants);
+    } else {
+      const filteredList = listOfRestaurants.filter((resList) =>
+        resList.name.toLowerCase().includes(searchText.toLowerCase()),
+      );
+      setFilteredRestaurant(filteredList);
     }
-
-    const filteredList = listOfRestaurants.filter((resList) =>
-      resList.name.toLowerCase().includes(searchText.toLowerCase()),
-    );
-
-    setFilteredRestaurant(filteredList);
   };
-
-  const onlineStatus = useOnlineStatus();
-  if (!onlineStatus) return <h1>{OFFLINE_MESSAGE}</h1>;
 
   const filterMenuRatings = () => {
     const filteredList = listOfRestaurants.filter(
