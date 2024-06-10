@@ -12,7 +12,7 @@ export const Cart = () => {
   };
 
   return (
-    <div className="bg-gradient-to-r from-violet-200 to-pink-200">
+    <div className="min-h-screen bg-gradient-to-r from-violet-200 to-pink-200">
       <h1 className="font-bold text-center text-2xl mt-3">Cart</h1>
       <button
         className="items-center text-center justify-center border-2 bg-slate-100 p-2 lg:ml-96 font-bold rounded-lg "
@@ -26,7 +26,8 @@ export const Cart = () => {
         </h1>
       )}
       <div>
-        <RestaurantMenuList resMenu={cartItems} />
+      {cartItems.map((item, index)=>( <RestaurantMenuList key={index} resMenu={[item]}  />))}
+       
       </div>
     </div>
   );
