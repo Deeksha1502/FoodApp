@@ -60,50 +60,53 @@ export const Login = () => {
   };
 
   return (
-   
-      <div className="h-screen bg-gradient-to-r from-violet-200 to-pink-200 flex items-center justify-center">
-        <form
-          onSubmit={(e) => e.preventDefault()}
-          className="w-1/4 p-12 shadow-lg bg-gradient-to-r from-violet-200 to-pink-200 mx-auto right-0 left-0 rounded-md"
-          label="input form"
-        >
-          <p className="font-bold text-2xl text-center mb-4">
-            {isSigninForm ? "Sign In" : "Sign up"}
-          </p>
-          <div className="flex flex-col">
-            {!isSigninForm && (
-              <input
-                type="text"
-                // ref={username}
-                placeholder="Full name"
-                className="p-2 my-2 w-full"
-              />
-            )}
+    <div className="h-screen bg-gradient-to-r from-violet-200 to-pink-200 flex items-center justify-center">
+      <form
+        onSubmit={(e) => e.preventDefault()}
+        className="w-1/4 p-12 shadow-lg bg-gradient-to-r from-violet-200 to-pink-200 mx-auto right-0 left-0 rounded-md"
+        label="input form"
+      >
+        <p className="font-bold text-2xl text-center mb-4">
+          {isSigninForm ? "Sign In" : "Sign up"}
+        </p>
+        <div className="flex flex-col">
+          {!isSigninForm && (
             <input
               type="text"
-              ref={email}
-              placeholder="email"
+              placeholder="Full name"
               className="p-2 my-2 w-full"
             />
+          )}
+          <input
+            type="text"
+            ref={email}
+            placeholder="email"
+            className="p-2 my-2 w-full"
+          />
 
-            <input
-              ref={password}
-              type="password"
-              placeholder="password"
-              className="p-2 my-2 w-full"
-            />
-            <p className="text-red-500">{errorMessage}</p>
-            <button className="mt-4 p-4 border-2 font-bold" onClick={handleButtonClick}>
-              {isSigninForm ? "Sign In" : "Sign up"}
-            </button>
-            <p onClick={toggleSigninButton} className="mt-6 font-bold cursor-pointer">
-              {isSigninForm
-                ? "New User? Sign up now"
-                : "Already registered? Signin now"}
-            </p>
-          </div>
-        </form>
-      </div>
-  
+          <input
+            ref={password}
+            type="password"
+            placeholder="password"
+            className="p-2 my-2 w-full"
+          />
+          <p className="text-red-500">{errorMessage}</p>
+          <button
+            className="mt-4 p-4 border-2 font-bold"
+            onClick={handleButtonClick}
+          >
+            {isSigninForm ? "Sign In" : "Sign up"}
+          </button>
+          <p
+            onClick={toggleSigninButton}
+            className="mt-6 font-bold cursor-pointer"
+          >
+            {isSigninForm
+              ? "New User? Sign up now"
+              : "Already registered? Signin now"}
+          </p>
+        </div>
+      </form>
+    </div>
   );
 };

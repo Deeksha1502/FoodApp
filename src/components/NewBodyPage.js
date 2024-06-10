@@ -59,7 +59,7 @@ export const NewBodyPage = () => {
   console.log(Background);
 
   return (
-    <div className="bg-gradient-to-r from-violet-200 to-pink-200 min-w-full">
+    <div className="w-full bg-gradient-to-r from-violet-200 to-pink-200 min-w-full">
       <div className="flex flex-2 justify-between space-between col-span-3 mb-20 min-w-full">
         <div className="m-12 pl-14 w-auto">
           <h3 className="mb-12 font-bold lg:pt-16 md:pt-9 lg:text-6xl md:text-3xl">
@@ -74,7 +74,7 @@ export const NewBodyPage = () => {
         </div>
         <img
           src={Background}
-          className="shadow-lg dark:shadow-black/30 rounded-lg mx-auto  lg:w-auto mr-40 mt-20 max-w-full h-1/2 md:w-96 sm:w-96"
+          className="shadow-lg dark:shadow-black/30 rounded-lg mx-auto  lg:w-auto mr-40 mt-20  h-1/2 md:w-96 sm:w-80"
           alt="food logo"
         />
       </div>
