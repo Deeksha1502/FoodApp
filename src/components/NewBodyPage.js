@@ -59,7 +59,7 @@ export const NewBodyPage = () => {
   console.log(Background);
 
   return (
-    <div className="bg-gradient-to-r from-violet-200 to-pink-200 min-w-full">
+    <div className="w-full bg-gradient-to-r from-violet-200 to-pink-200 min-w-full">
       <div className="flex flex-2 justify-between space-between col-span-3 mb-20 min-w-full">
         <div className="m-12 pl-14 w-auto">
           <h3 className="mb-12 font-bold lg:pt-16 md:pt-9 lg:text-6xl md:text-3xl">
@@ -74,15 +74,15 @@ export const NewBodyPage = () => {
         </div>
         <img
           src={Background}
-          className="shadow-lg dark:shadow-black/30 rounded-lg mx-auto  lg:w-auto mr-40 mt-20 max-w-full h-1/2 md:w-96 sm:w-96"
+          className="shadow-lg dark:shadow-black/30 rounded-lg mx-auto sm:max-w-lg md:max-w-xl mr-40 mt-20  h-1/2 md:w-96 sm:w-80"
           alt="food logo"
         />
       </div>
       <div className="flex mt-4 font-Metrophobic">
-        <div className="flex items-center ml-24 space-x-12">
+        <div className="flex flex-wrap justify-center sm:justify-start items-center ml-24 space-x-12">
           <button
             className="truncate text-white bg-blue-700 hover:bg-blue-600 
-      font-medium rounded-full text-xl px-5 py-2.5 text-center mr-2 mb-2 flex"
+      font-medium rounded-full text-xl px-5 py-2.5 text-center mr-2 mb-2 flex sm:text-base md:text-lg"
             onClick={filterMenuRatings}
           >
             Top Rated Restaurants
@@ -96,11 +96,11 @@ export const NewBodyPage = () => {
             Pure Veg
           </button>
         </div>
-        <div className="grid-rows-1 flex my-4 lg:px-60">
+        <div className="flex flex-col sm:flex-row items-center lg:ml-96 lg:mb-5">
           <input
             type="text"
             placeholder="Search..."
-            className="sm:inline focus:outline-none ml-2 border-2 border-blue bg-white h-12 px-5 pr-16 rounded-l-full text-sm focus:shadow-outline"
+            className="flex-grow sm:flex-grow-0 sm:w-auto focus:outline-none ml-2 border-2 border-blue bg-white h-12 px-5 pr-16 rounded-l-full text-sm sm:text-base focus:shadow-outline "
             value={searchText}
             onChange={(e) => {
               setErrorMessage(" ");
@@ -124,6 +124,7 @@ export const NewBodyPage = () => {
               <path d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
             </svg>
           </button>
+
           <div className="text-red-500 w-40">{errorMessage}</div>
         </div>
       </div>

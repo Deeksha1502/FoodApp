@@ -7,9 +7,7 @@ import {
   Cart,
   ErrorDisplay,
   RestaurantMenuList,
-
   Login,
- 
 } from "./components";
 
 import { resMenu } from "./utils/mockMenu";
