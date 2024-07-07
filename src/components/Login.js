@@ -4,13 +4,14 @@ import {
   createUserWithEmailAndPassword,
   signInWithEmailAndPassword,
 } from "firebase/auth";
-import { auth } from "../utils/firebase";
+import { auth, db } from "../utils/firebase";
+import { setDoc, doc } from "firebase/firestore";
 export const Login = () => {
   const [isSigninForm, setIsSigninForm] = useState(false);
   const [errorMessage, setErrorMessage] = useState(null);
   const email = useRef(null);
   const password = useRef(null);
-  // const username = useRef(null);
+  const username = useRef(null);
 
   const toggleSigninButton = () => {
     setIsSigninForm(!isSigninForm);
@@ -20,8 +21,9 @@ export const Login = () => {
     const message = checkValidation(
       email.current.value,
       password.current.value,
-      // username.current.value,
+      username.current.value,
     );
+    console.log("user signin successfully");
     setErrorMessage(message);
 
     if (message) return;
@@ -36,6 +38,7 @@ export const Login = () => {
           const user = userCredential.user;
           console.log(user);
         })
+
         .catch((error) => {
           const errorCode = error.code;
           const errorMessage = error.message;
@@ -50,6 +53,12 @@ export const Login = () => {
         .then((userCredential) => {
           const user = userCredential.user;
           console.log(user);
+          if (user) {
+            setDoc(doc(db, "Users", user.uid), {
+              email: user.email,
+              username: fullname,
+            });
+          }
         })
         .catch((error) => {
           const errorCode = error.code;
@@ -60,10 +69,10 @@ export const Login = () => {
   };
 
   return (
-    <div className="h-screen bg-gradient-to-r from-violet-200 to-pink-200 flex items-center justify-center">
+    <div className="h-screen  flex items-center justify-center">
       <form
         onSubmit={(e) => e.preventDefault()}
-        className="w-1/4 p-12 shadow-lg bg-gradient-to-r from-violet-200 to-pink-200 mx-auto right-0 left-0 rounded-md"
+        className="w-1/4 p-12 shadow-lg bg-gradient-to-r  mx-auto right-0 left-0 rounded-md"
         label="input form"
       >
         <p className="font-bold text-2xl text-center mb-4">

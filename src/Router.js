@@ -14,7 +14,7 @@ import { resMenu } from "./utils/mockMenu";
 
 const AppLayout = () => {
   return (
-    <div className="app bg-gradient-to-r from-violet-200 to-pink-200">
+    <div className="app">
       <Header />
       <Outlet />
     </div>

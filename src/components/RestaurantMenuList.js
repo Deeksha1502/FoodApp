@@ -20,8 +20,8 @@ export const RestaurantMenuList = (props) => {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-r from-violet-200 to-pink-200">
-      <div className="w-6/12 mx-auto my-4 shadow-lg p-4 bg-gradient-to-r from-violet-200 to-pink-200 text-bold flex items-center">
+    <div className="min-h-screen ">
+      <div className="w-6/12 mx-auto my-4 shadow-lg p-4 text-bold flex items-center">
         <ul>
           {resMenu?.map((item, index) => (
             <li key={index}>
