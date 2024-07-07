@@ -2,9 +2,9 @@ export const RestaurantCard = (props) => {
   const { resList } = props;
 
   return (
-    <div className="m-4 p-4 w-[250px] border-1 border-blue-700 bg-white rounded-lg hover:bg-purple-100 shadow-lg">
+    <div className="m-8 p-4 w-[250px] border-1 border-blue-700 bg-white rounded-lg hover:bg-purple-100 shadow-lg">
       <img
-        className="rounded-md"
+        className="rounded-md h-56 w-full"
         src={resList.cloudinaryImageId}
       ></img>
       <div className="font-Metrophobic">

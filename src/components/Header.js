@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { useProducts } from "../context/ContextItems";
 import { resList } from "../utils/mockData";
-import logo from "../assets/tastytrails.png";
 import { useSelector } from "react-redux";
 
 export const Header = () => {
@@ -15,7 +14,7 @@ export const Header = () => {
   };
 
   return (
-    <div className="sticky top-0 z-50 bg-violet-200 bg-opacity-30 backdrop-blur-sm backdrop-filter border border-pink-200 border-opacity-40 rounded-lg">
+    <div className="sticky top-0 z-50  bg-opacity-30 backdrop-blur-sm backdrop-filter border-opacity-40 rounded-lg">
       <div className="flex flex-col text-xl items-center justify-between px-4 py-2 lg:flex-row lg:px-24">
         <div className="flex items-center justify-between w-full lg:w-auto">
           <Link
@@ -23,11 +22,11 @@ export const Header = () => {
             onClick={() => setFilteredRestaurant(resList)}
             className="mr-4"
           >
-            <img
-              className="h-12 w-auto lg:h-16"
-              src={logo}
-              alt="Tasty Trails Logo"
-            />
+            <div>
+              <h1 className="lg:text-3xl font-bold  font-Metrophobic">
+                Tasty Trails
+              </h1>
+            </div>
           </Link>
           <button
             className="lg:hidden text-black focus:outline-none"
