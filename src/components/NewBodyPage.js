@@ -60,8 +60,8 @@ export const NewBodyPage = () => {
 
   return (
     <div className="w-full bg-white min-w-full">
-      <div className="flex flex-2 justify-between space-between col-span-3 mb-20 min-w-full">
-        <div className="m-12 pl-14 w-auto">
+      <div className="flex flex-col md:flex-row justify-between space-between mb-20 min-w-full text-2xl">
+        <div className="m-5 pl-14 w-auto">
           <h3 className="mb-12 font-bold lg:pt-16 md:pt-9 lg:text-6xl md:text-3xl">
             Discover a world of flavors delivered conveniently at your door
             step!
@@ -74,14 +74,14 @@ export const NewBodyPage = () => {
         </div>
         <img
           src={Background}
-          className="shadow-lg dark:shadow-black/30 rounded-lg mx-auto sm:max-w-lg md:max-w-xl mr-40 mt-20  h-1/2 md:w-96 sm:w-80"
+          className="shadow-lg dark:shadow-black/30 rounded-lg mx-auto  md:max-w-xl mr-40 mt-20 w-64 h-60 md:w-96 flex items-center justify-center sm:w-auto"
           alt="food logo"
         />
       </div>
-      <div className="flex mt-4 font-Metrophobic">
-        <div className="flex flex-wrap justify-center sm:justify-start items-center ml-24 space-x-12">
+      <div className="flex flex-col md:flex-row items-center mt-4 font-Metrophobic">
+        <div className="flex flex-wrap justify-center sm:justify-start items-center ml-24 md:mb-0 space-x-12">
           <button
-            className="truncate text-white bg-blue-700 hover:bg-blue-600 
+            className="truncate text-white bg-blue-700 hover:bg-blue-600 justify-center items-center sm:w-auto
       font-medium rounded-full text-xl px-5 py-2.5 text-center mr-2 mb-2 flex sm:text-base md:text-lg"
             onClick={filterMenuRatings}
           >
@@ -96,34 +96,36 @@ export const NewBodyPage = () => {
             Pure Veg
           </button>
         </div>
-        <div className="flex flex-col sm:flex-row items-center lg:ml-96 lg:mb-5">
-          <input
-            type="text"
-            placeholder="Search..."
-            className="flex-grow sm:flex-grow-0 sm:w-auto focus:outline-none ml-2 border-2 border-blue bg-white h-12 px-5 pr-16 rounded-l-full text-sm sm:text-base focus:shadow-outline "
-            value={searchText}
-            onChange={(e) => {
-              setErrorMessage(" ");
-              setSearchText(e.target.value);
-            }}
-          ></input>
+        <div className="flex flex-col sm:flex-row items-center w-full md:w-auto lg:ml-96 lg:mb-5">
+          <div className="flex w-full sm:w-auto items-center justify-center">
+            <input
+              type="text"
+              placeholder="Search..."
+              className="flex  focus:outline-none ml-2 border-2 border-blue bg-white h-12 px-5 pr-16 rounded-l-full text-sm sm:text-base focus:shadow-outline "
+              value={searchText}
+              onChange={(e) => {
+                setErrorMessage(" ");
+                setSearchText(e.target.value);
+              }}
+            ></input>
 
-          <button
-            className=" pb-4 sm:inline focus:outline-none border-2 px-5 rounded-r-full focus:shadow-outline  text-lg"
-            onClick={filterList}
-          >
-            <svg
-              fill="none"
-              stroke="currentColor"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="3"
-              viewBox="0 0 24 24"
-              class="w-7 h-5 mt-2"
+            <button
+              className=" pb-4 sm:inline focus:outline-none border-2 px-5 rounded-r-full focus:shadow-outline  text-lg"
+              onClick={filterList}
             >
-              <path d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
-            </svg>
-          </button>
+              <svg
+                fill="none"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="3"
+                viewBox="0 0 24 24"
+                class="w-7 h-5 mt-2"
+              >
+                <path d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+              </svg>
+            </button>
+          </div>
 
           <div className="text-red-500 w-40">{errorMessage}</div>
         </div>
