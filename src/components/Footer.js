@@ -8,7 +8,7 @@ export const Footer = () => {
   return (
     <div className="mt-3 shadow-lg">
       <div className="bg-blue-50 shadow-xl w-full text-center font-Metrophobic grid md:grid-cols-2 lg:grid-cols-4 pt-8 pb-8 pl-28">
-        <div className="pr-28 ">
+        <div className=" mb-4 md:mb-0">
           <p className="font-semibold">
             Your Food Delivery Partner Tastytrailers
           </p>
@@ -18,17 +18,18 @@ export const Footer = () => {
           </p>
         </div>
 
-        <div className="">
-          <ul className="no-underline">
-            <li className="font-semibold">Explore</li>
-            <li>About Us</li>
-            <li>Menu</li>
+        <div className="flex flex-col items-center justify-center mb-4 md:mb-0">
+          <ul className="no-underline flex flex-col items-center justify-center">
+            <li className="font-semibold mb-2">Explore</li>
+            <li className="mb-1">About Us</li>
+            <li className="mb-1">Menu</li>
             <li>Contact Us</li>
           </ul>
         </div>
-        <div>
+
+        <div className="flex flex-col items-center mb-4 md:mb-0 justify-center">
           <ul>
-            <li className="font-semibold">Get in touch</li>
+            <li className="font-semibold flex flex-col md:justify-center items-center w-full">Get in touch</li>
 
             <li className="flex justify-center items-center  space-x-1.5 p-1.5">
               <CiLocationOn />
@@ -42,7 +43,7 @@ export const Footer = () => {
           </ul>
         </div>
         <div className="font-semibold">
-          Connect with us
+          <span className="mb-2">Connect with us</span>
           <ul>
             <li className="flex justify-center items-center  space-x-1.5 p-1.5">
               <a href="https://twitter.com/Deeksha__1502" target="_blank">
