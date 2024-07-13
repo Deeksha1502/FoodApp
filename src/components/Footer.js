@@ -6,9 +6,9 @@ import { FaLinkedin } from "react-icons/fa";
 
 export const Footer = () => {
   return (
-    <div className="mt-3 shadow-lg">
-      <div className="bg-blue-50 shadow-xl w-full text-center font-Metrophobic grid md:grid-cols-2 lg:grid-cols-4 pt-8 pb-8 pl-28">
-        <div className=" mb-4 md:mb-0">
+    <div className="mt-3 shadow-lg flex flex-col w-full items-center justify-center pr-8">
+      <div className="bg-blue-50 shadow-xl w-full text-center font-Metrophobic grid md:grid-cols-2 lg:grid-cols-4 pt-8 pb-8 pl-14 p4-14">
+        <div className="mb-4 md:mb-0">
           <p className="font-semibold">
             Your Food Delivery Partner Tastytrailers
           </p>
@@ -29,7 +29,9 @@ export const Footer = () => {
 
         <div className="flex flex-col items-center mb-4 md:mb-0 justify-center">
           <ul>
-            <li className="font-semibold flex flex-col md:justify-center items-center w-full">Get in touch</li>
+            <li className="font-semibold flex flex-col md:justify-center items-center w-full">
+              Get in touch
+            </li>
 
             <li className="flex justify-center items-center  space-x-1.5 p-1.5">
               <CiLocationOn />
