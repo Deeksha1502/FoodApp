@@ -101,7 +101,7 @@ export const resList = [
     },
   },
   {
-    id: "146304",
+    id: "16304",
     name: "A2B - Adyar Ananda Bhavan",
     cloudinaryImageId: ab,
     locality: "Victoria Road",
@@ -151,7 +151,7 @@ export const resList = [
   },
 
   {
-    id: "8766",
+    id: "11551",
     name: "Theobroma",
     cloudinaryImageId: theobroma,
     locality: "Richmond Town",
@@ -177,7 +177,7 @@ export const resList = [
   },
 
   {
-    id: "30531",
+    id: "15199",
     name: "Hotel Empire",
     cloudinaryImageId: empire,
     locality: "Brigade Road",
@@ -228,7 +228,7 @@ export const resList = [
   },
 
   {
-    id: "77949",
+    id: "15190",
     name: "Burger King",
     cloudinaryImageId: burgerking,
     locality: "Gandhi Bazar",
@@ -276,7 +276,7 @@ export const resList = [
   },
 
   {
-    id: "3369",
+    id: "33699",
     name: "Truffles",
     cloudinaryImageId: truffles,
     locality: "St. Marks Road",
@@ -312,7 +312,7 @@ export const resList = [
   },
 
   {
-    id: "4046",
+    id: "15015",
     name: "Hari Super Sandwich",
 
     cloudinaryImageId: hariSuper,
