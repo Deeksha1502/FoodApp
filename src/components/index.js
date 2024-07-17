@@ -6,5 +6,6 @@ export * from "./Error";
 export * from "./RestaurantMenuList";
 export * from "./NewBodyPage";
 export * from "./Cart";
+export * from "./RestaurantDetails";
 
 

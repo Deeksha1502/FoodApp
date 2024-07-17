@@ -1,7 +1,10 @@
+import { Link } from 'react-router-dom';
+
 export const RestaurantCard = (props) => {
   const { resList } = props;
 
   return (
+    <Link to={`/restaurant/${resList.id}`} className="block">
     <div className="m-8 p-4 w-[250px] border-1 border-blue-700 bg-white rounded-lg hover:bg-purple-100 shadow-lg">
       <img
         className="rounded-md h-56 w-full"
@@ -29,5 +32,6 @@ export const RestaurantCard = (props) => {
         </h4>
       </div>
     </div>
+    </Link>
   );
 };

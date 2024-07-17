@@ -27,7 +27,7 @@ import empireseconddish from "../assets/dishes/empireseconddish.png";
 
 export const resMenu = [
   {
-    restaurantId: "159159",
+    restaurantId: "69876",
 
     id: "1",
     restaurantName: "Subway",
@@ -63,7 +63,7 @@ export const resMenu = [
   },
 
   {
-    restaurantId: "151978",
+    restaurantId: "43836",
 
     id: "2",
     restaurantName: "McD",
@@ -101,7 +101,7 @@ export const resMenu = [
   },
 
   {
-    restaurantId: "151971",
+    restaurantId: "16073",
 
     id: "3",
     restaurantName: "California Burrito",
@@ -137,7 +137,7 @@ export const resMenu = [
   },
 
   {
-    restaurantId: "151972",
+    restaurantId: "16304",
 
     id: "4",
     restaurantName: "A2B",
@@ -173,7 +173,7 @@ export const resMenu = [
   },
 
   {
-    restaurantId: "151978",
+    restaurantId: "11551",
 
     id: "5",
     restaurantName: "Theobroma",
@@ -190,7 +190,7 @@ export const resMenu = [
   },
 
   {
-    restaurantId: "151979",
+    restaurantId: "15199",
 
     id: "6",
     restaurantName: "Hotel Empire",
@@ -207,7 +207,7 @@ export const resMenu = [
   },
 
   {
-    restaurantId: "151980",
+    restaurantId: "15190",
 
     id: "7",
     restaurantName: "Burger King",
@@ -222,9 +222,9 @@ export const resMenu = [
   },
 
   {
-    restaurantId: "151978",
+    restaurantId: "33699",
 
-    id: "5",
+    id: "8",
     restaurantName: "Truffles",
     firstItem: "Caesar salad",
     firstDescription: "Dark chocolate ganache with chocolate sponge.",
