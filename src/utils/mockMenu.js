@@ -22,7 +22,8 @@ import theofirstdish from "../assets/dishes/theofirstdish.png";
 import theoseconddish from "../assets/dishes/theoseconddish.png";
 import empirefirstdish from "../assets/dishes/empirefirstdish.png";
 import empireseconddish from "../assets/dishes/empireseconddish.png";
-import pizzahseconddish from "../assets/dishes/pizzaseconddish.png";
+import pizzahfirstdish from "../assets/dishes/pizzagarlicfirstdish.png";
+import pizzaseconddish from "../assets/dishes/pizzaseconddish.png";
 import nicseconddish from "../assets/dishes/nicseconddish.png";
 import nicfirstdish from "../assets/dishes/nicfirstdish.png";
 import leonseconddish from "../assets/dishes/leonseconddish.png";
@@ -35,6 +36,10 @@ import hssfirstdish from "../assets/dishes/hssfirstdish.png";
 import hssseconddish from "../assets/dishes/hssseconddish.png";
 import kfcfirstdish from "../assets/dishes/kfcfirstdish.png";
 import kfcseconddish from "../assets/dishes/kfcseconddish.png";
+import upaharafirstdish from "../assets/dishes/upaharadfirstdish.png";
+import upaharaseconddish from "../assets/dishes/upaharaseconddish.png";
+import wowmfirstdish from "../assets/dishes/wowmfirstdish.png";
+import wowmseconddish from "../assets/dishes/wowmseconddish.png";
 
 export const resMenu = [
   {
@@ -116,6 +121,7 @@ export const resMenu = [
 
     id: "3",
     restaurantName: "California Burrito",
+    firstItem: "Rice bowl",
     firstDescription: "Barbeque Paneer Rice Bowl (Regular)",
     description:
       "Serves 1 | Fresh cilantro rice and everything nice. Comes with your favourite toppings, fajita veggies like bell peppers and onions, pico de galla and BBQ Paneer.",
@@ -127,24 +133,6 @@ export const resMenu = [
       "Serves 1 | Fresh cilantro rice and everything nice. Comes with your favourite toppings, fajita veggies like bell peppers and onions, pico de galla and crispy mushroom",
     secondItemCost: "Rs.299",
     secondCloudinaryimageid: califorseconddish,
-
-    thirdItem: "Peri Peri Potato Rice Bowl (Regular)",
-    thirdDescription:
-      "Serves 1 | Fresh cilantro rice and everything nice. Comes with your favourite toppings, fajita veggies like bell peppers and onions, pico de galla and peri peri potato",
-    thirdItemCost: "Rs.359",
-    thirdCloudinaryimageid: califorthirddish,
-
-    fourthItem: "Barbeque Paneer Burrito (Regular)",
-    fourthDescription:
-      "Serves 1 | Fresh cilantro rice and everything nice. Comes with your favourite toppings, fajita veggies like bell peppers and onions, pico de galla and peri peri potato",
-    cost: "Rs.329",
-    fourthCloudinaryimageid: califorfourthdish,
-
-    fifthItem: "Barbeque Paneer Salad (Mini)",
-    fifthDescription:
-      "Serves 1 | A crisp bowl of fresh greens that includes a variety of goodness such as corn salsa, pico de galla, pinto beans and barbeque paneer.",
-    cost: "Rs.249",
-    fifthCloudinaryimageid: califorfifthdish,
   },
 
   {
@@ -273,14 +261,16 @@ export const resMenu = [
 
     id: "10",
     restaurantName: "Naturals Ice cream",
-    firstItem: "Cheese Sandwich",
-    firstDescription: "Grilled cheese sandwich with loads of veggies",
-    firstItemCost: "Rs.625",
+    firstItem: "Chocobite Ice Cream",
+    firstDescription:
+      "Serves 1 | Have a weakness for chocolate? Then you’ll fall in love with our original Choco Bite ice cream. It’s made from coco mass sourced from Ghana. You’ll even find hand-cut chocolate chunks in this flavour, making it truly hard to resist.",
+    firstItemCost: "Rs.80",
     firstCloudinaryimageid: nicfirstdish,
 
-    secondItem: "Aglio pasta",
-    secondDescription: "Creamy White sauce pasta with freshly grated cheese",
-    secondItemCost: "Rs.725",
+    secondItem: "Roasted Almond Ice Cream",
+    secondDescription:
+      "Serves 1 | The almonds are sourced from California. But the inimitable taste of this delicious flavour is our very own! ",
+    secondItemCost: "Rs.100",
     secondCloudinaryimageid: nicseconddish,
   },
 
@@ -288,14 +278,14 @@ export const resMenu = [
     restaurantId: "11115",
 
     id: "11",
-    restaurantName: "Leon's -Burgers and Wings",
-    firstItem: "Cheese Sandwich",
-    firstDescription: "Grilled cheese sandwich with loads of veggies",
-    firstItemCost: "Rs.625",
+    restaurantName: "Leon's - Burgers and Wings",
+    firstItem: "Veg burger",
+    firstDescription: "Grilled cheese burger loaded wih cheese",
+    firstItemCost: "Rs.555",
     firstCloudinaryimageid: leonfirstdish,
 
-    secondItem: "Aglio pasta",
-    secondDescription: "Creamy White sauce pasta with freshly grated cheese",
+    secondItem: "Burger+Coke+Fries",
+    secondDescription: "A combo box which provides a delicious meal",
     secondItemCost: "Rs.725",
     secondCloudinaryimageid: leonseconddish,
   },
@@ -321,39 +311,48 @@ export const resMenu = [
 
     id: "13",
     restaurantName: "Pizza Hut",
-    firstItem: "Cheese Sandwich",
-    firstDescription: "Grilled cheese sandwich with loads of veggies",
-    firstItemCost: "Rs.625",
-    firstCloudinaryimageid: pizzahseconddish,
+    firstItem: "Grarlic Bread",
+    firstDescription:
+      "Grilled chilly cheese garlic bread with loads of cheese and mayo",
+    firstItemCost: "Rs.222",
+    firstCloudinaryimageid: pizzahfirstdish,
 
-    secondItem: "Aglio pasta",
-    secondDescription: "Creamy White sauce pasta with freshly grated cheese",
-    secondItemCost: "Rs.725",
+    secondItem: "Cheese Pizza",
+    secondDescription: "Grilled chilly cheese pizza with loads of cheese",
+    secondItemCost: "Rs.555",
+    secondCloudinaryimageid: pizzaseconddish,
   },
   {
     restaurantId: "69696",
 
     id: "14",
     restaurantName: "Wow momos",
-    firstItem: "Cheese Sandwich",
-    firstDescription: "Grilled cheese sandwich with loads of veggies",
-    firstItemCost: "Rs.625",
+    firstItem: "Corn Cheese Pan Fried Momo in Schezwan Sauce (Spicy)",
+    firstDescription:
+      "Hot & crispy Corn Cheese fried Momo, tossed in spicy Schezwan sauce and garnished with coriander We don't serve additional Sauce with this plate of Momos [5Pcs].",
+    firstItemCost: "Rs.222",
+    firstCloudinaryimageid: wowmseconddish,
 
-    secondItem: "Aglio pasta",
-    secondDescription: "Creamy White sauce pasta with freshly grated cheese",
-    secondItemCost: "Rs.725",
+    secondItem: "Chatpata Paneer Steam Momo",
+    secondDescription:
+      "Savor the goodness of Delicious Momos, filled with freshly chopped Veggies, Paneer, a hint of spices, and blended with Indian Masala. Accompanied by our tantalizing Spicy Red Sauce [5pcs]",
+    secondItemCost: "Rs.333",
+    secondCloudinaryimageid: wowmfirstdish,
   },
   {
     restaurantId: "96969",
 
     id: "9",
     restaurantName: "Upahara Darshini",
-    firstItem: "Cheese Sandwich",
-    firstDescription: "Grilled cheese sandwich with loads of veggies",
-    firstItemCost: "Rs.625",
+    firstItem: "Stuffed Naan",
+    firstDescription: "Naan cooked with lots garlic and butter",
+    firstItemCost: "Rs.150",
+    firstCloudinaryimageid: upaharafirstdish,
 
-    secondItem: "Aglio pasta",
-    secondDescription: "Creamy White sauce pasta with freshly grated cheese",
+    secondItem: "Gobi Manchurian",
+    secondDescription:
+      "deep-fried, crispy Cauliflower tossed in a thick and spicy manchurian gravy.",
     secondItemCost: "Rs.725",
+    secondCloudinaryimageid: upaharaseconddish,
   },
 ];
