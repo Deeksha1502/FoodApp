@@ -362,7 +362,7 @@ export const resList = [
   },
 
   {
-    id: "29673",
+    id: "15555",
     name: "Natural Ice Cream",
     cloudinaryImageId: nic,
     locality: "St. Marks Road",
@@ -410,7 +410,7 @@ export const resList = [
   },
 
   {
-    id: "65797",
+    id: "11115",
     name: "Leon's - Burgers & Wings",
     cloudinaryImageId: leon,
     locality: "Koramangala",
@@ -462,7 +462,7 @@ export const resList = [
   },
 
   {
-    id: "30955",
+    id: "55551",
     name: "KFC",
     cloudinaryImageId: KFC,
     locality: "Mantri Square",
@@ -513,7 +513,7 @@ export const resList = [
   },
 
   {
-    id: "10575",
+    id: "15151",
     name: "Pizza Hut",
     cloudinaryImageId: pizza,
     locality: "Shanti Nagar",
@@ -563,7 +563,7 @@ export const resList = [
     restaurantOfferPresentationInfo: {},
   },
   {
-    id: "22037",
+    id: "69696",
     name: "Wow! Momo",
     cloudinaryImageId: wowmomos,
     locality: "Brigade Road",
@@ -614,7 +614,7 @@ export const resList = [
   },
 
   {
-    id: "102324",
+    id: "96969",
     name: "Upahara Darshini",
     cloudinaryImageId: upahara,
     locality: "Basavangudi",

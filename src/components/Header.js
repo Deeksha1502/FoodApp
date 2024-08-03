@@ -56,11 +56,11 @@ export const Header = () => {
                 Home
               </Link>
             </li>
-            <li>
+            {/* <li>
               <Link to="/menu" onClick={toggleMenu}>
                 Menu
               </Link>
-            </li>
+            </li> */}
             <li>
               <Link to="/cart" onClick={toggleMenu}>
                 Cart - {cartItems.length} item
