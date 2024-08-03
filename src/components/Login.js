@@ -5,7 +5,8 @@ import {
   signInWithEmailAndPassword,
 } from "firebase/auth";
 import { auth, db } from "../utils/firebase";
-import { setDoc, doc } from "firebase/firestore";
+import { setDoc, getDoc, doc } from "firebase/firestore";
+import { useNavigate } from "react-router-dom";
 export const Login = () => {
   const [isSigninForm, setIsSigninForm] = useState(false);
   const [errorMessage, setErrorMessage] = useState(null);
@@ -13,58 +14,58 @@ export const Login = () => {
   const password = useRef(null);
   const username = useRef(null);
 
+  const navigate = useNavigate();
+
   const toggleSigninButton = () => {
     setIsSigninForm(!isSigninForm);
   };
 
-  const handleButtonClick = () => {
-    const message = checkValidation(
-      email.current.value,
-      password.current.value,
-      username.current.value,
-    );
-    console.log("user signin successfully");
+  const handleButtonClick = async () => {
+    let message;
+    if (!isSigninForm) {
+      message = checkValidation(
+        email.current.value,
+        password.current.value,
+        username.current ? username.current.value : "",
+      );
+    } else {
+      message = checkValidation(email.current.value, password.current.value);
+    }
+
     setErrorMessage(message);
 
     if (message) return;
 
-    if (!isSigninForm) {
-      createUserWithEmailAndPassword(
-        auth,
-        email.current.value,
-        password.current.value,
-      )
-        .then((userCredential) => {
-          const user = userCredential.user;
-          console.log(user);
-        })
-
-        .catch((error) => {
-          const errorCode = error.code;
-          const errorMessage = error.message;
-          setErrorMessage(errorCode + "-" + errorMessage);
+    try {
+      if (!isSigninForm) {
+        const userCredential = await createUserWithEmailAndPassword(
+          auth,
+          email.current.value,
+          password.current.value,
+        );
+        const user = userCredential.user;
+        await setDoc(doc(db, "Users", user.uid), {
+          email: user.email,
+          fullname: username.current.value,
         });
-    } else {
-      signInWithEmailAndPassword(
-        auth,
-        email.current.value,
-        password.current.value,
-      )
-        .then((userCredential) => {
-          const user = userCredential.user;
-          console.log(user);
-          if (user) {
-            setDoc(doc(db, "Users", user.uid), {
-              email: user.email,
-              username: fullname,
-            });
-          }
-        })
-        .catch((error) => {
-          const errorCode = error.code;
-          const errorMessage = error.message;
-          setErrorMessage(errorCode + "-" + errorMessage);
-        });
+        console.log("user signed up successfully");
+        navigate("/welcome", { state: { name: username.current.value } });
+      } else {
+        const userCredential = await signInWithEmailAndPassword(
+          auth,
+          email.current.value,
+          password.current.value,
+        );
+        const user = userCredential.user;
+        // const userDoc = await getDoc(doc(db, "Users", user.uid));
+        // const userData = userDoc.data();
+        console.log("user signed in successfully");
+        navigate("/welcome", { state: { name: user.email } });
+      }
+    } catch (error) {
+      const errorCode = error.code;
+      const errorMessage = error.message;
+      setErrorMessage(errorCode + "-" + errorMessage);
     }
   };
 
@@ -82,6 +83,7 @@ export const Login = () => {
           {!isSigninForm && (
             <input
               type="text"
+              ref={username}
               placeholder="Full name"
               className="p-2 my-2 w-full"
             />
