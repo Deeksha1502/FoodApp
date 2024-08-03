@@ -278,7 +278,7 @@ export const resMenu = [
     restaurantId: "11115",
 
     id: "11",
-    restaurantName: "Leon's -Burgers and Wings",
+    restaurantName: "Leon's - Burgers and Wings",
     firstItem: "Veg burger",
     firstDescription: "Grilled cheese burger loaded wih cheese",
     firstItemCost: "Rs.555",
@@ -313,12 +313,12 @@ export const resMenu = [
     restaurantName: "Pizza Hut",
     firstItem: "Grarlic Bread",
     firstDescription:
-      "Grilled chilly cheese garlic bread with loads of cheesee and mayo",
+      "Grilled chilly cheese garlic bread with loads of cheese and mayo",
     firstItemCost: "Rs.222",
     firstCloudinaryimageid: pizzahfirstdish,
 
     secondItem: "Cheese Pizza",
-    secondDescription: "Grilled chilly cheese pizza with loads of cheesee",
+    secondDescription: "Grilled chilly cheese pizza with loads of cheese",
     secondItemCost: "Rs.555",
     secondCloudinaryimageid: pizzaseconddish,
   },
