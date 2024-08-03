@@ -20,10 +20,21 @@ import a2bfourthdish from "../assets/dishes/a2bfourthdish.png";
 import a2bfifthdish from "../assets/dishes/a2bfifthdish.png";
 import theofirstdish from "../assets/dishes/theofirstdish.png";
 import theoseconddish from "../assets/dishes/theoseconddish.png";
-
 import empirefirstdish from "../assets/dishes/empirefirstdish.png";
 import empireseconddish from "../assets/dishes/empireseconddish.png";
-
+import pizzahseconddish from "../assets/dishes/pizzaseconddish.png";
+import nicseconddish from "../assets/dishes/nicseconddish.png";
+import nicfirstdish from "../assets/dishes/nicfirstdish.png";
+import leonseconddish from "../assets/dishes/leonseconddish.png";
+import leonfirstdish from "../assets/dishes/leonfirstdish.png";
+import burgerkfirstdish from "../assets/dishes/burgerkfirstdish.png";
+import burgerkseconddish from "../assets/dishes/burgerkseconddish.png";
+import trufflesfirstdish from "../assets/dishes/trufflesfirstdish.png";
+import trufflesseconddish from "../assets/dishes/trufflesseconddish.png";
+import hssfirstdish from "../assets/dishes/hssfirstdish.png";
+import hssseconddish from "../assets/dishes/hssseconddish.png";
+import kfcfirstdish from "../assets/dishes/kfcfirstdish.png";
+import kfcseconddish from "../assets/dishes/kfcseconddish.png";
 
 export const resMenu = [
   {
@@ -211,14 +222,16 @@ export const resMenu = [
 
     id: "7",
     restaurantName: "Burger King",
-    firstItem: "Eggless Dutch Truffle Cake [1/2kg]",
-    firstDescription: "Dark chocolate ganache with chocolate sponge.",
-    firstItemCost: "Rs.625",
+    firstItem: "Crispy Veg Burger",
+    firstDescription:
+      "Masaledar Veg Patty, Onion & Our Signature Tomato Herby Sauce. ",
+    firstItemCost: "Rs.150",
+    firstCloudinaryimageid: burgerkfirstdish,
 
-    secondItem: "Chocoholic Cake [1/2kg]",
-    secondDescription:
-      "Three layers of chocolate mousse: white, milk and dark chocolate mousse layered in this crowd-favourite cake.",
-    secondItemCost: "Rs.725",
+    secondItem: "King Fries",
+    secondDescription: "The Perfect Crispy Partner",
+    secondItemCost: "Rs.130",
+    secondCloudinaryimageid: burgerkseconddish,
   },
 
   {
@@ -229,12 +242,118 @@ export const resMenu = [
     firstItem: "Caesar salad",
     firstDescription: "Dark chocolate ganache with chocolate sponge.",
     firstItemCost: "Rs.625",
-
+    firstCloudinaryimageid: trufflesfirstdish,
 
     secondItem: "Aglio pasta",
     secondDescription:
       "Three layers of chocolate mousse: white, milk and dark chocolate mousse layered in this crowd-favourite cake.",
     secondItemCost: "Rs.725",
-   
+    secondCloudinaryimageid: trufflesseconddish,
+  },
+
+  {
+    restaurantId: "15015",
+
+    id: "9",
+    restaurantName: "Hari Super Sandwich",
+    firstItem: "Masala Puri",
+    firstDescription:
+      "A delighylly flavorful dish of crispy puris crushed and mixed with tasty peas gravy, chaat chutney, onions and more.",
+    firstItemCost: "Rs.70",
+    firstCloudinaryimageid: hssseconddish,
+
+    secondItem: "American Sweet corn Sandwich",
+    secondDescription:
+      "A delicious sandwich made by toasted fresh bread layered with cheese and stuffed with mixed vegetables and sweet corn.",
+    secondItemCost: "Rs.100",
+    secondCloudinaryimageid: hssfirstdish,
+  },
+  {
+    restaurantId: "15555",
+
+    id: "10",
+    restaurantName: "Naturals Ice cream",
+    firstItem: "Cheese Sandwich",
+    firstDescription: "Grilled cheese sandwich with loads of veggies",
+    firstItemCost: "Rs.625",
+    firstCloudinaryimageid: nicfirstdish,
+
+    secondItem: "Aglio pasta",
+    secondDescription: "Creamy White sauce pasta with freshly grated cheese",
+    secondItemCost: "Rs.725",
+    secondCloudinaryimageid: nicseconddish,
+  },
+
+  {
+    restaurantId: "11115",
+
+    id: "11",
+    restaurantName: "Leon's -Burgers and Wings",
+    firstItem: "Cheese Sandwich",
+    firstDescription: "Grilled cheese sandwich with loads of veggies",
+    firstItemCost: "Rs.625",
+    firstCloudinaryimageid: leonfirstdish,
+
+    secondItem: "Aglio pasta",
+    secondDescription: "Creamy White sauce pasta with freshly grated cheese",
+    secondItemCost: "Rs.725",
+    secondCloudinaryimageid: leonseconddish,
+  },
+  {
+    restaurantId: "55551",
+
+    id: "12",
+    restaurantName: "KFC",
+    firstItem: "Veg Zinger Burger with Cheese",
+    firstDescription:
+      "Signature veg burger with crispy patties, cheese slice, veggies & a tangy sauce",
+    firstItemCost: "Rs.215",
+    firstCloudinaryimageid: kfcfirstdish,
+
+    secondItem: "Veg Box Meal",
+    secondDescription:
+      "Enjoy special Veg Box Meal with savings of Rs. 101 on Veg Zinger Burger, 2 Pc Veg patty, Medium Fries & a Pepsi PET 475ml",
+    secondItemCost: "Rs.399",
+    secondCloudinaryimageid: kfcseconddish,
+  },
+  {
+    restaurantId: "15151",
+
+    id: "13",
+    restaurantName: "Pizza Hut",
+    firstItem: "Cheese Sandwich",
+    firstDescription: "Grilled cheese sandwich with loads of veggies",
+    firstItemCost: "Rs.625",
+    firstCloudinaryimageid: pizzahseconddish,
+
+    secondItem: "Aglio pasta",
+    secondDescription: "Creamy White sauce pasta with freshly grated cheese",
+    secondItemCost: "Rs.725",
+  },
+  {
+    restaurantId: "69696",
+
+    id: "14",
+    restaurantName: "Wow momos",
+    firstItem: "Cheese Sandwich",
+    firstDescription: "Grilled cheese sandwich with loads of veggies",
+    firstItemCost: "Rs.625",
+
+    secondItem: "Aglio pasta",
+    secondDescription: "Creamy White sauce pasta with freshly grated cheese",
+    secondItemCost: "Rs.725",
+  },
+  {
+    restaurantId: "96969",
+
+    id: "9",
+    restaurantName: "Upahara Darshini",
+    firstItem: "Cheese Sandwich",
+    firstDescription: "Grilled cheese sandwich with loads of veggies",
+    firstItemCost: "Rs.625",
+
+    secondItem: "Aglio pasta",
+    secondDescription: "Creamy White sauce pasta with freshly grated cheese",
+    secondItemCost: "Rs.725",
   },
 ];
