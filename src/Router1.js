@@ -8,7 +8,8 @@ import {
   ErrorDisplay,
   RestaurantMenuList,
   Login,
-  Welcome
+  Welcome,
+  NewCart,
 } from "./components";
 
 import { resMenu } from "./utils/mockMenu";
@@ -42,7 +43,7 @@ export const appRouter = createBrowserRouter([
       },
       {
         path: "/cart",
-        element: <Cart />,
+        element: <NewCart />,
       },
       {
         path: "/login",
