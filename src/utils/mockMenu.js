@@ -50,31 +50,31 @@ export const resMenu = [
     firstItem: "Delhi Tikki Sandwich + Side + Coke",
     firstDescription:
       "Enjoy your favourite Grills sandwich with a choice of drink and a cookie or veg kebabs.",
-    firstItemCost: "Rs.279",
+    firstItemCost: "₹279",
     firstCloudinaryimageid: subwayfirstdish,
 
     secondItem: "Bombay Grill Sandwich + Side + Coke",
     secondDescription:
       "Enjoy your favourite Grills sandwich with a choice of drink and a cookie or veg kebabs.",
-    secondItemCost: "Rs.279",
+    secondItemCost: "₹279",
     secondCloudinaryimageid: subwayseconddish,
 
     // thirdItem: "3 Cheese Melt Sandwich + Side + Coke",
     // thirdDescription:
     //   "Enjoy your favourite Grills sandwich with a choice of drink and any choice of side.",
-    // thirdItemCost: "Rs.289",
+    // thirdItemCost: "₹289",
     // thirdCloudinaryimageid: subwaythirddish,
 
     // fourthItem: "Paneer Achari Sandwich + Side + Coke",
     // fourthDescription:
     //   "Enjoy your favourite Hotseller sub with a choice of cookie and a choice of drink.",
-    // fourthItemCost: "Rs.379",
+    // fourthItemCost: "₹379",
     // fourthCloudinaryimageid: subwayfourthdish,
 
     // fifthItem: "Crunchy Mexican Sandwich + Side + Coke",
     // fifthDescription:
     //   "Enjoy your favourite Hotseller sub with a choice of cookie and a choice of drink.",
-    // fifthItemCost: "Rs.359",
+    // fifthItemCost: "₹359",
     // fifthCloudinaryimageid: subwayfifthdish,
   },
 
@@ -86,33 +86,33 @@ export const resMenu = [
     firstItem: "2 McAloo Tikki Burger + 2 Fries (L)",
     firstDescription:
       "Enjoy your favourite Grills sandwich with a choice of drink and a cookie or veg kebabs.",
-    firstItemCost: "Rs.329",
+    firstItemCost: "₹329",
     firstCloudinaryimageid: mcdfirstdish,
 
     secondItem: "Burger Combo for 2: McVeggie Burger with Pizza McPuff",
     secondDescription:
       "Save big on your favourite sharing combo - 2 McVeggie Burger + 2 Fries (M) + Veg Pizza McPuff",
-    secondItemCost: "Rs.389",
+    secondItemCost: "₹389",
     secondCloudinaryimageid: mcdseconddish,
 
     thirdItem:
       "McSpicy Paneer Burger + 2 Fries M + McAloo Tikki + Veg Pizza McPuff",
     thirdDescription:
       "Get the best value in your meal for 2. Save big on your favourite sharing meal - McSpicy Paneer Burger + 2 Fries (M) + McAloo Tikki Burger + Veg Pizza McPuff",
-    thirdItemCost: "Rs.359",
+    thirdItemCost: "₹359",
     thirdCloudinaryimageid: mcdthirddish,
 
     fourthItem:
       "McSpicy Paneer Burger + McAloo Tikki Burger + Fries (L) + 2 Coke",
     fourthDescription:
       "Get the best value in your meal for 2. Save big on your favourite sharing meal - McSpicy Paneer Burger + Fries (L) + 2 Coke + McAloo Tikki Burger",
-    cost: "Rs.329",
+    cost: "₹329",
     fourthCloudinaryimageid: mcdfourthdish,
 
     fifthItem: "McVeggie Burger + McAloo Tikki Burger + Fries (L) + 2 Coke",
     fifthDescription:
       "Get the best value in your meal for 2. Save big on your favourite sharing meal - McVeggie Burger + Fries (L) + 2 Coke + McAloo Tikki Burger",
-    cost: "Rs.389",
+    cost: "₹389",
     fifthCloudinaryimageid: mcdfifthdish,
   },
 
@@ -125,13 +125,13 @@ export const resMenu = [
     firstDescription: "Barbeque Paneer Rice Bowl (Regular)",
     description:
       "Serves 1 | Fresh cilantro rice and everything nice. Comes with your favourite toppings, fajita veggies like bell peppers and onions, pico de galla and BBQ Paneer.",
-    firstItemCost: "Rs.309",
+    firstItemCost: "₹309",
     firstCloudinaryimageid: califorfirstdish,
 
     secondItem: "Crispy Mushroom Rice Bowl (Regular)",
     secondDescription:
       "Serves 1 | Fresh cilantro rice and everything nice. Comes with your favourite toppings, fajita veggies like bell peppers and onions, pico de galla and crispy mushroom",
-    secondItemCost: "Rs.299",
+    secondItemCost: "₹299",
     secondCloudinaryimageid: califorseconddish,
   },
 
@@ -143,31 +143,31 @@ export const resMenu = [
     firstItem: "Rava Idly",
     firstDescription:
       "Serves 1 | Rava idly [1Nos] (also rave idly) is a variation of the popular South Indian breakfast item idly, made with Rava and curd Serve with aloo sagu and coconut chutney",
-    firstItemCost: "Rs.90",
+    firstItemCost: "₹90",
     firstCloudinaryimageid: a2bfirstdish,
 
     secondItem: "Ghee Pongal",
     secondDescription:
       "Serves 1 | A savory dish made of cooked rice and green gram blended with clarified butter,mildly tempered with spices, garnished with cashews and servedhot",
-    secondItemCost: "Rs.110",
+    secondItemCost: "₹110",
     secondCloudinaryimageid: a2bseconddish,
 
     thirdItem: "Mini Tiffin",
     thirdDescription:
       "Serves 1 | A delicious traditional platter of fluffy idlis, Medhu Vada, Pongal, Rava Kesari, and a Mini Dosa, served with a spicy sambar and chutneys.",
-    thirdItemCost: "Rs.180",
+    thirdItemCost: "₹180",
     thirdCloudinaryimageid: a2bthirddish,
 
     fourthItem: "Rava Onion Masala",
     fourthDescription:
       "Serves 1 | A delicious textured dosa made of semolina, rice and all-purpose flour batter with chopped chilies, onions, pepper corns and coriander served with sambar and chutney.",
-    fourthItemCost: "Rs.150",
+    fourthItemCost: "₹150",
     fourthCloudinaryimageid: a2bfourthdish,
 
     fifthItem: "Medhu Vadai",
     fifthDescription:
       "Serves 1 | Crispy donut-shaped deep-fried fritters made of ground black lentil batter mixed with finely diced onions, peppercorn, green chilies served with a spicy sambar and chutney",
-    fifthItemCost: "Rs.70",
+    fifthItemCost: "₹70",
     fifthCloudinaryimageid: a2bfifthdish,
   },
 
@@ -178,13 +178,13 @@ export const resMenu = [
     restaurantName: "Theobroma",
     firstItem: "Eggless Dutch Truffle Cake [1/2kg]",
     firstDescription: "Dark chocolate ganache with chocolate sponge.",
-    firstItemCost: "Rs.625",
+    firstItemCost: "₹625",
     firstCloudinaryimageid: theofirstdish,
 
     secondItem: "Chocoholic Cake [1/2kg]",
     secondDescription:
       "Three layers of chocolate mousse: white, milk and dark chocolate mousse layered in this crowd-favourite cake.",
-    secondItemCost: "Rs.725",
+    secondItemCost: "₹725",
     secondCloudinaryimageid: theoseconddish,
   },
 
@@ -195,13 +195,13 @@ export const resMenu = [
     restaurantName: "Hotel Empire",
     firstItem: "Empire Special Chicken Kebab",
     firstDescription: "Empire Special Chicken Kebab Empire Classic Dry",
-    firstItemCost: "Rs.110",
+    firstItemCost: "₹110",
     firstCloudinaryimageid: empirefirstdish,
 
     secondItem: "Chicken Biryani (Regular), Raita & Popcorn Kebab",
     secondDescription:
       "Chicken Biriyani (Regular), Raitha, Popcorn Kebab (5 Pcs)",
-    secondItemCost: "Rs.215",
+    secondItemCost: "₹215",
     secondCloudinaryimageid: empireseconddish,
   },
 
@@ -213,12 +213,12 @@ export const resMenu = [
     firstItem: "Crispy Veg Burger",
     firstDescription:
       "Masaledar Veg Patty, Onion & Our Signature Tomato Herby Sauce. ",
-    firstItemCost: "Rs.150",
+    firstItemCost: "₹150",
     firstCloudinaryimageid: burgerkfirstdish,
 
     secondItem: "King Fries",
     secondDescription: "The Perfect Crispy Partner",
-    secondItemCost: "Rs.130",
+    secondItemCost: "₹130",
     secondCloudinaryimageid: burgerkseconddish,
   },
 
@@ -229,13 +229,13 @@ export const resMenu = [
     restaurantName: "Truffles",
     firstItem: "Caesar salad",
     firstDescription: "Dark chocolate ganache with chocolate sponge.",
-    firstItemCost: "Rs.625",
+    firstItemCost: "₹625",
     firstCloudinaryimageid: trufflesfirstdish,
 
     secondItem: "Aglio pasta",
     secondDescription:
       "Three layers of chocolate mousse: white, milk and dark chocolate mousse layered in this crowd-favourite cake.",
-    secondItemCost: "Rs.725",
+    secondItemCost: "₹725",
     secondCloudinaryimageid: trufflesseconddish,
   },
 
@@ -247,13 +247,13 @@ export const resMenu = [
     firstItem: "Masala Puri",
     firstDescription:
       "A delighylly flavorful dish of crispy puris crushed and mixed with tasty peas gravy, chaat chutney, onions and more.",
-    firstItemCost: "Rs.70",
+    firstItemCost: "₹70",
     firstCloudinaryimageid: hssseconddish,
 
     secondItem: "American Sweet corn Sandwich",
     secondDescription:
       "A delicious sandwich made by toasted fresh bread layered with cheese and stuffed with mixed vegetables and sweet corn.",
-    secondItemCost: "Rs.100",
+    secondItemCost: "₹100",
     secondCloudinaryimageid: hssfirstdish,
   },
   {
@@ -264,13 +264,13 @@ export const resMenu = [
     firstItem: "Chocobite Ice Cream",
     firstDescription:
       "Serves 1 | Have a weakness for chocolate? Then you’ll fall in love with our original Choco Bite ice cream. It’s made from coco mass sourced from Ghana. You’ll even find hand-cut chocolate chunks in this flavour, making it truly hard to resist.",
-    firstItemCost: "Rs.80",
+    firstItemCost: "₹80",
     firstCloudinaryimageid: nicfirstdish,
 
     secondItem: "Roasted Almond Ice Cream",
     secondDescription:
       "Serves 1 | The almonds are sourced from California. But the inimitable taste of this delicious flavour is our very own! ",
-    secondItemCost: "Rs.100",
+    secondItemCost: "₹100",
     secondCloudinaryimageid: nicseconddish,
   },
 
@@ -281,12 +281,12 @@ export const resMenu = [
     restaurantName: "Leon's - Burgers and Wings",
     firstItem: "Veg burger",
     firstDescription: "Grilled cheese burger loaded wih cheese",
-    firstItemCost: "Rs.555",
+    firstItemCost: "₹555",
     firstCloudinaryimageid: leonfirstdish,
 
     secondItem: "Burger+Coke+Fries",
     secondDescription: "A combo box which provides a delicious meal",
-    secondItemCost: "Rs.725",
+    secondItemCost: "₹725",
     secondCloudinaryimageid: leonseconddish,
   },
   {
@@ -297,13 +297,13 @@ export const resMenu = [
     firstItem: "Veg Zinger Burger with Cheese",
     firstDescription:
       "Signature veg burger with crispy patties, cheese slice, veggies & a tangy sauce",
-    firstItemCost: "Rs.215",
+    firstItemCost: "₹215",
     firstCloudinaryimageid: kfcfirstdish,
 
     secondItem: "Veg Box Meal",
     secondDescription:
-      "Enjoy special Veg Box Meal with savings of Rs. 101 on Veg Zinger Burger, 2 Pc Veg patty, Medium Fries & a Pepsi PET 475ml",
-    secondItemCost: "Rs.399",
+      "Enjoy special Veg Box Meal with savings of ₹ 101 on Veg Zinger Burger, 2 Pc Veg patty, Medium Fries & a Pepsi PET 475ml",
+    secondItemCost: "₹399",
     secondCloudinaryimageid: kfcseconddish,
   },
   {
@@ -314,12 +314,12 @@ export const resMenu = [
     firstItem: "Grarlic Bread",
     firstDescription:
       "Grilled chilly cheese garlic bread with loads of cheese and mayo",
-    firstItemCost: "Rs.222",
+    firstItemCost: "₹222",
     firstCloudinaryimageid: pizzahfirstdish,
 
     secondItem: "Cheese Pizza",
     secondDescription: "Grilled chilly cheese pizza with loads of cheese",
-    secondItemCost: "Rs.555",
+    secondItemCost: "₹555",
     secondCloudinaryimageid: pizzaseconddish,
   },
   {
@@ -330,13 +330,13 @@ export const resMenu = [
     firstItem: "Corn Cheese Pan Fried Momo in Schezwan Sauce (Spicy)",
     firstDescription:
       "Hot & crispy Corn Cheese fried Momo, tossed in spicy Schezwan sauce and garnished with coriander We don't serve additional Sauce with this plate of Momos [5Pcs].",
-    firstItemCost: "Rs.222",
+    firstItemCost: "₹222",
     firstCloudinaryimageid: wowmseconddish,
 
     secondItem: "Chatpata Paneer Steam Momo",
     secondDescription:
       "Savor the goodness of Delicious Momos, filled with freshly chopped Veggies, Paneer, a hint of spices, and blended with Indian Masala. Accompanied by our tantalizing Spicy Red Sauce [5pcs]",
-    secondItemCost: "Rs.333",
+    secondItemCost: "₹333",
     secondCloudinaryimageid: wowmfirstdish,
   },
   {
@@ -346,13 +346,13 @@ export const resMenu = [
     restaurantName: "Upahara Darshini",
     firstItem: "Stuffed Naan",
     firstDescription: "Naan cooked with lots garlic and butter",
-    firstItemCost: "Rs.150",
+    firstItemCost: "₹150",
     firstCloudinaryimageid: upaharafirstdish,
 
     secondItem: "Gobi Manchurian",
     secondDescription:
       "deep-fried, crispy Cauliflower tossed in a thick and spicy manchurian gravy.",
-    secondItemCost: "Rs.725",
+    secondItemCost: "₹725",
     secondCloudinaryimageid: upaharaseconddish,
   },
 ];
