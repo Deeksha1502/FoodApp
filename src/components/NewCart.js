@@ -1,5 +1,5 @@
 import { useDispatch, useSelector } from "react-redux";
-import { clearCart,removeItem } from "../utils/cartSlice";
+import { clearCart, removeItem } from "../utils/cartSlice";
 import { Link } from "react-router-dom";
 export const NewCart = () => {
   const cartItems = useSelector((state) => state.cart.items);
@@ -50,11 +50,11 @@ export const NewCart = () => {
                 <p>{item.description}</p>
               </div>
             </div>
-            <div className="flex items-center">
-              <p className="font-semibold m4-4">{item.cost}</p>
+            <div className="grid grid-cols-2 space-x-2 mx-auto">
+              <p className="font-extrabold">{item.cost}</p>
               <button
                 onClick={() => handleRemoveItem(item)}
-                className="bg-red-500 text-white px-2 py-1 hover:bg-red-600 transition-colors"
+                className="bg-red-500 text-white px-2 ml-5 py-1 hover:bg-red-600 transition-colors"
               >
                 Remove
               </button>
@@ -66,14 +66,14 @@ export const NewCart = () => {
         <p className="text-xl font-bold">
           Total: ₹{calculateTotal().toFixed(2)}
         </p>
-        <div className="mt-4 space-x-4">
+        <div className="mt-4 space-x-4 ">
           <button
             onClick={handleClearCart}
-            className="bg-red-500 text-white px-4 py-3 rounded hover:bg-red-600 transition-colors"
+            className="bg-red-500 text-white px-4 py-2 rounded hover:bg-red-700 transition-colors"
           >
             Clear Cart
           </button>
-          <button className="bg-green-500 text-white px-4 py-2 rounded hover:bg-green-600 transition-colors">
+          <button className="bg-green-500 text-white px-4 py-2  rounded hover:bg-green-600 transition-colors">
             Proceed to checkout
           </button>
         </div>
@@ -81,3 +81,4 @@ export const NewCart = () => {
     </div>
   );
 };
+// bg-red-500 text-white px-4 py-2 rounded hover:bg-red-600 transition-colors

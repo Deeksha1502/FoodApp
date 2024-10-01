@@ -85,7 +85,7 @@ export const NewBodyPage = () => {
       font-medium rounded-full text-xl px-5 py-2.5 text-center mr-2 mb-2 flex sm:text-base md:text-lg"
             onClick={filterMenuRatings}
           >
-            Top Rated Restaurants
+          Top Rated Restaurants
           </button>
 
           <button

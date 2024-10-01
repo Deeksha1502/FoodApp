@@ -8,9 +8,13 @@ export const cartSlice = createSlice({
       state.items.push(action.payload);
     },
     removeItem: (state, action) => {
-      state.items = state.items.filter(
-        (item) => item.name !== action.payload.name,
+      const index = state.items.findIndex(
+        (item) => item.id === action.payload.id,
       );
+      if (index !== -1) {
+        state.items.splice(index, 1);
+      }
+ 
     },
     clearCart: (state) => {
       state.items = [];
