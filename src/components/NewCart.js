@@ -8,8 +8,8 @@ export const NewCart = () => {
   const cartItems = useSelector((state) => state.cart.items);
   const dispatch = useDispatch();
 
-  const handleRemoveItem = (item) => {
-    dispatch(removeItem(item));
+  const handleRemoveItem = (cartId) => {
+    dispatch(removeItem(cartId));
   };
 
   const handleClearCart = () => {
@@ -46,7 +46,7 @@ export const NewCart = () => {
             key={index}
             className="flex items-center justify-between border-b pb-2"
           >
-            <div className="flex items-center">
+            <div className="flex items-center" key={item.cartId}>
               <img
                 src={item.cloudinaryimageid}
                 alt={item.name}
@@ -60,7 +60,7 @@ export const NewCart = () => {
             <div className="grid grid-cols-2 space-x-2 mx-auto">
               <p className="font-extrabold">{item.cost}</p>
               <button
-                onClick={() => handleRemoveItem(item)}
+                onClick={() => handleRemoveItem(item.cartId)}
                 className="bg-red-500 text-white px-2 ml-5 py-1 hover:bg-red-600 transition-colors"
               >
                 Remove
