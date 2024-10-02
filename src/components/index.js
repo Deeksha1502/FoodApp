@@ -9,3 +9,4 @@ export * from "./NewBodyPage";
 export * from "./RestaurantDetails";
 export * from "./Welcome";
 export * from "./NewCart";
+export * from "./Modals";
