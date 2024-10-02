@@ -1,7 +1,10 @@
 import { useDispatch, useSelector } from "react-redux";
 import { clearCart, removeItem } from "../utils/cartSlice";
 import { Link } from "react-router-dom";
+import { useState } from "react";
+import { Modals } from "./Modals";
 export const NewCart = () => {
+  const [openModal, setOpenModal] = useState(false);
   const cartItems = useSelector((state) => state.cart.items);
   const dispatch = useDispatch();
 
@@ -19,6 +22,10 @@ export const NewCart = () => {
       0,
     );
   };
+
+  const total = calculateTotal();
+  console.log("total bill is", total);
+
   if (cartItems.length === 0) {
     return (
       <div className="container mx-auto p-4 text-center">
@@ -63,9 +70,7 @@ export const NewCart = () => {
         ))}
       </ul>
       <div className="mt-8">
-        <p className="text-xl font-bold">
-          Total: ₹{calculateTotal().toFixed(2)}
-        </p>
+        <p className="text-xl font-bold">Total: ₹{total.toFixed(2)}</p>
         <div className="mt-4 space-x-4 ">
           <button
             onClick={handleClearCart}
@@ -73,12 +78,15 @@ export const NewCart = () => {
           >
             Clear Cart
           </button>
-          <button className="bg-green-500 text-white px-4 py-2  rounded hover:bg-green-600 transition-colors">
+          <button
+            className="bg-green-500 text-white px-4 py-2  rounded hover:bg-green-600 transition-colors"
+            onClick={() => setOpenModal(true)}
+          >
             Proceed to checkout
           </button>
+          {openModal && <Modals closeModal={setOpenModal} totalBill={total} />}
         </div>
       </div>
     </div>
   );
 };
-// bg-red-500 text-white px-4 py-2 rounded hover:bg-red-600 transition-colors
