@@ -19,7 +19,6 @@ export const Welcome = () => {
       <h1 className="text-3xl font-bold">
         Welcome, {location.state?.name || user.email}!
       </h1>
-      <h3>Please find your order details below</h3>
     </div>
   );
 };
