@@ -167,9 +167,7 @@ export const Contact = () => {
                     <button
                       type="submit"
                       class="w-full bg-blue-800 text-white px-6 py-3 font-xl rounded-md sm:mb-0"
-                      onClick={() => {
-                        alert("MEssage sent");
-                      }}
+                     
                     >
                       Send Message
                     </button>
