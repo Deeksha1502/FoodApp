@@ -12,7 +12,7 @@ export const Welcome = () => {
     });
 
     return () => unsubscribe();
-  });
+  },[]);
 
   return (
     <div className="h-screen flex items-center justify-center">
