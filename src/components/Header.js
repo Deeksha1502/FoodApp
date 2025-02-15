@@ -1,13 +1,35 @@
-import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import React, { useEffect, useState } from "react";
+import { Link, useNavigate } from "react-router-dom";
 import { useProducts } from "../context/ContextItems";
 import { resList } from "../utils/mockData";
 import { useSelector } from "react-redux";
+import { onAuthStateChanged, signOut } from "firebase/auth";
+import { auth } from "../utils/firebase";
 
 export const Header = () => {
   const cartItems = useSelector((store) => store.cart.items);
   const { setFilteredRestaurant } = useProducts();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [user,  setUser] = useState(null);
+const navigate = useNavigate();
+  useEffect(()=>{
+    const unsubscribe = onAuthStateChanged(auth, (user)=>{
+      setUser(user);
+     
+    })
+
+    return () => unsubscribe();
+  }, [])
+
+  const handleLogout = async ()=>{
+    try{
+      await signOut(auth);;
+      setUser(null);
+      navigate('/login')
+    }catch(error){
+      console.error(error);
+    } 
+  }
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
@@ -66,11 +88,17 @@ export const Header = () => {
                 Cart - {cartItems.length} 
               </Link>
             </li>
-            <li>
-              <Link to="/login" onClick={toggleMenu}>
-                Login
-              </Link>
-            </li>
+            {user ?(
+              <li>
+                <button onClick={handleLogout}>Logout</button>
+              </li>
+            ) : (
+              <li>
+                <Link to="/login" onClick={toggleMenu}>
+                  Login
+                </Link>
+              </li>
+            )}
             <li>
               <Link to="/contact" onClick={toggleMenu}>
                 Contact
