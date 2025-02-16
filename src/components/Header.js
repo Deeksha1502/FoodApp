@@ -10,25 +10,27 @@ export const Header = () => {
   const cartItems = useSelector((store) => store.cart.items);
   const { setFilteredRestaurant } = useProducts();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [user,  setUser] = useState(null);
-const navigate = useNavigate();
-  useEffect(()=>{
-    const unsubscribe = onAuthStateChanged(auth, (user)=>{
-      setUser(user);
-     
+  const [user, setUser] = useState(null);
+  const [loading, setIsLoading] = useState(true);
+  const navigate = useNavigate();
+  useEffect(() => {
+    const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
+      setUser(currentUser);
+      setIsLoading(false);
+
     })
 
     return () => unsubscribe();
   }, [])
 
-  const handleLogout = async ()=>{
-    try{
+  const handleLogout = async () => {
+    try {
       await signOut(auth);;
       setUser(null);
       navigate('/login')
-    }catch(error){
+    } catch (error) {
       console.error(error);
-    } 
+    }
   }
 
   const toggleMenu = () => {
@@ -68,9 +70,8 @@ const navigate = useNavigate();
           </button>
         </div>
         <nav
-          className={`${
-            isMenuOpen ? "block" : "hidden"
-          } lg:block w-2/7 lg:w-auto`}
+          className={`${isMenuOpen ? "block" : "hidden"
+            } lg:block w-2/7 lg:w-auto`}
         >
           <ul className="flex flex-col space-y-2 lg:flex-row lg:space-y-0 lg:space-x-6 text-black font-Metrophobic font-semibold">
             <li>
@@ -85,12 +86,14 @@ const navigate = useNavigate();
             </li> */}
             <li>
               <Link to="/cart" onClick={toggleMenu}>
-                Cart - {cartItems.length} 
+                Cart - {cartItems.length}
               </Link>
             </li>
-            {user ?(
+            {loading ? null : user ? (
               <li>
-                <button onClick={handleLogout}>Logout</button>
+                <button onClick={handleLogout} className="cursor-pointer">
+                  Logout
+                </button>
               </li>
             ) : (
               <li>
